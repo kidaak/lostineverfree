@@ -5,4 +5,8 @@
 	<input type="submit" value="Add">
 </form>
 
-<ul id="ponies"></ul>
+<ul>
+<% for pony in @ponies.models: %>
+	<li><%= pony.get('name') %></li>
+<% end %>
+</ul>
