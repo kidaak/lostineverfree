@@ -3,9 +3,13 @@ class Mlp.Routers.Ponies extends Backbone.Router
 		'': 'index'
 		'ponies/:id': 'show'
 
+	initialize: ->
+		@collection = new Mlp.Collections.Ponies()
+
 	index: ->
-		view = new Mlp.Views.PoniesIndex()
-		$('#container').html(view.render().el)
+		@collection.fetch success: =>
+			view = new Mlp.Views.PoniesIndex(collection: @collection)
+			$('#container').html(view.render().el)
 
 	show: (id) ->
 		alert "Pony #{id}"

@@ -1,3 +1,8 @@
 <h1>My Little Pony</h1>
 
-<%= @ponies %>
+<form id="new_pony">
+	<input type="text" name="name" id="new_pony_name">
+	<input type="submit" value="Add">
+</form>
+
+<ul id="ponies"></ul>
