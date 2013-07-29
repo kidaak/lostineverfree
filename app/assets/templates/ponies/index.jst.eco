@@ -1,10 +1,20 @@
 <h1>My Little Pony</h1>
 
+<h3>New Pony</h3>
 <form id="new_pony">
-	<label>name</label>
+	<label>Pony name:</label>
 	<input type="text" name="name" id="new_pony_name">
-	<label>url</label>
-	<input type="text" name="url" id="new_pony_url">
+	<label>Image url:</label>
+	<input type="text" name="img_url" id="new_pony_img_url">
+	<input type="submit" value="Add">
+</form>
+
+<h3>Change Setting</h3>
+<form id="new_setting">
+	<label>Setting name:</label>
+	<input type="text" name="name" id="new_setting_name">
+	<label>Image url:</label>
+	<input type="text" name="img_url" id="new_setting_img_url">
 	<input type="submit" value="Add">
 </form>
 
@@ -13,7 +23,8 @@
 <% for pony in @ponies.models: %>
 	<li>
 	<%= pony.get('name') %>
-	<img src="<%= pony.get('url') %>" alt="shutterfly">
+	<img src="<%= pony.get('img_url') %>" alt="shutterfly" height="70" width="70">
 	</li>
 <% end %>
 </ul>
+<img id="setting" src="http://fc05.deviantart.net/fs70/i/2011/109/9/1/canterlot_sunset___wallpaper_by_crappyunicorn-d3ece2n.jpg">
