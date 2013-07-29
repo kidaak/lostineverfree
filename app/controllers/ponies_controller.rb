@@ -14,6 +14,7 @@ def show
 end
 
 def create
+	console.log(params.inspect)
 	respond_with Pony.create(params[:pony])
 end
 

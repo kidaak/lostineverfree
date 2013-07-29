@@ -15,4 +15,4 @@ class Mlp.Views.PoniesIndex extends Backbone.View
 
   createPony: (event) ->
   	event.preventDefault()
-  	@collection.create name: $('#new_pony_name').val()
+  	@collection.create(name: $('#new_pony_name').val(), url: $('#new_pony_url').val())
