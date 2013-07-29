@@ -1,6 +1,10 @@
 class PoniesController < ApplicationController
 respond_to :json
 
+def new
+	respond_with Pony.new
+end
+
 def index
 	respond_with Pony.all 
 end

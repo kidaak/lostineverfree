@@ -1,12 +1,19 @@
 <h1>My Little Pony</h1>
 
 <form id="new_pony">
+	<label>name</label>
 	<input type="text" name="name" id="new_pony_name">
+	<label>url</label>
+	<input type="text" name="url" id="new_pony_url">
 	<input type="submit" value="Add">
 </form>
 
+
 <ul>
 <% for pony in @ponies.models: %>
-	<li><%= pony.get('name') %></li>
+	<li>
+	<%= pony.get('name') %>
+	<img src="<%= pony.get('url') %>" alt="shutterfly">
+	</li>
 <% end %>
 </ul>
