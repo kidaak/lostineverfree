@@ -5,7 +5,7 @@ window.Mlp =
   Routers: {}
   initialize: -> 
   	new Mlp.Routers.Ponies
-  	Backbone.history.start()
+  	Backbone.history.start(pushState: true)
 
 $(document).ready ->
   Mlp.initialize()

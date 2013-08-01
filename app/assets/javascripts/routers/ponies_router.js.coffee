@@ -5,6 +5,7 @@ class Mlp.Routers.Ponies extends Backbone.Router
 
 	initialize: ->
 		@collection = new Mlp.Collections.Ponies()
+		@collection.reset($('#container').data('ponies'))
 
 	index: ->
 		@collection.fetch success: =>
