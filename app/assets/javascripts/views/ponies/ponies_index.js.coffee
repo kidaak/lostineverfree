@@ -23,7 +23,7 @@ class Mlp.Views.PoniesIndex extends Backbone.View
 
   ponyUp: (event) ->
     event.preventDefault()
-    @collection.ponyUp
+    @collection.ponyUp()
 
   changeSetting: (event) ->
     event.preventDefault()
@@ -36,7 +36,7 @@ class Mlp.Views.PoniesIndex extends Backbone.View
   createPony: (event) ->
     event.preventDefault()
     attributes = name: $('#new_pony_name').val()
-      img_url: $('#new_pony_img_url'.val())
+      img_url: $('#new_pony_img_url').val()
     @collection.create attributes,
       wait: true
       success: -> $('#new_pony')[0].reset()
