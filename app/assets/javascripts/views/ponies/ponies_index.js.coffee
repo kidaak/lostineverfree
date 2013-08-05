@@ -4,7 +4,6 @@ class Mlp.Views.PoniesIndex extends Backbone.View
 
   events:
     'submit #new_pony': 'createPony'
-    'submit #new_setting': 'changeSetting'
     'click #pony_up': 'ponyUp'
 
   initialize: ->
@@ -26,14 +25,6 @@ class Mlp.Views.PoniesIndex extends Backbone.View
     event.preventDefault()
     @collection.ponyDown()
     @collection.ponyUp()
-
-  changeSetting: (event) ->
-    event.preventDefault()
-    setting = document.getElementById "setting"
-    new_src = $('#new_setting_img_url').val()
-    console.log setting
-    console.log new_src
-    setting.src = new_src
 
   createPony: (event) ->
     event.preventDefault()

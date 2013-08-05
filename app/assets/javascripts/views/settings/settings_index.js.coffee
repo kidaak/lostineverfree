@@ -5,6 +5,9 @@ class Mlp.Views.SettingsIndex extends Backbone.View
   events:
     'submit #new_setting': 'changeSetting'
 
+  initialize: ->
+    console.log(@collection)
+
   changeSetting: (event) ->
     event.preventDefault()
     setting = document.getElementById "setting"

@@ -1,2 +1,13 @@
 
+  <fieldset>
+    <legend>Change Setting</legend>
+    <form id="new_setting" class="inline">
+      <label>Setting name:</label>
+      <input type="text" name="name" id="new_setting_name">
+      <label>Image url:</label>
+      <input type="text" name="img_url" id="new_setting_img_url">
+      <input type="submit" value="Change">
+    </form>
+  </fieldset>
+  
     <img id="setting" src="http://fc05.deviantart.net/fs70/i/2011/109/9/1/canterlot_sunset___wallpaper_by_crappyunicorn-d3ece2n.jpg" height="500" width="710">

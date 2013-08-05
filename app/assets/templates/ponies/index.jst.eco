@@ -16,22 +16,11 @@
 		</form>
 	</fieldset>
 
-	<fieldset>
-		<legend>Change Setting</legend>
-		<form id="new_setting" class="inline">
-			<label>Setting name:</label>
-			<input type="text" name="name" id="new_setting_name">
-			<label>Image url:</label>
-			<input type="text" name="img_url" id="new_setting_img_url">
-			<input type="submit" value="Change">
-		</form>
-	</fieldset>
-
 	<button id="pony_up">Pony Up!</button>
 </div>
 
 	<div id="venue" class="column span-18"></div>
-	
+
 	<span class="column span-4 last">
 		<ul id="ponies"></ul>
 	</span>
