@@ -1,31 +1,39 @@
+<div class="container">
+
 <h1>My Little Pony</h1>
 
-<h3>New Pony</h3>
-<form id="new_pony">
-	<label>Pony name:</label>
-	<input type="text" name="name" id="new_pony_name">
-	<label>Image url:</label>
-	<input type="text" name="img_url" id="new_pony_img_url">
-	<input type="submit" value="Add">
-</form>
+<div class="prepend-top">
+	<fieldset>
+		<legend>New Pony</legend>
+		<form id="new_pony" class="inline">
+			<label>Pony name:</label>
+			<input type="text" name="name" id="new_pony_name">
+			<label>Image url:</label>
+			<input type="text" name="img_url" id="new_pony_img_url">
+			<div class="mpcth-sc-button mpcth-sc-button-size-normal">
+				<input type="submit" value="Add">
+			</div>
+		</form>
+	</fieldset>
 
-<h3>Change Setting</h3>
-<form id="new_setting">
-	<label>Setting name:</label>
-	<input type="text" name="name" id="new_setting_name">
-	<label>Image url:</label>
-	<input type="text" name="img_url" id="new_setting_img_url">
-	<input type="submit" value="Change">
-</form>
+	<fieldset>
+		<legend>Change Setting</legend>
+		<form id="new_setting" class="inline">
+			<label>Setting name:</label>
+			<input type="text" name="name" id="new_setting_name">
+			<label>Image url:</label>
+			<input type="text" name="img_url" id="new_setting_img_url">
+			<input type="submit" value="Change">
+		</form>
+	</fieldset>
 
-<button id="pony_up">Pony Up!</button>
+	<button id="pony_up">Pony Up!</button>
+</div>
 
-
-<div class="container">
-	<div class="column span-4">
-		<img id="setting" src="http://fc05.deviantart.net/fs70/i/2011/109/9/1/canterlot_sunset___wallpaper_by_crappyunicorn-d3ece2n.jpg">
+	<div class="column span-18">
+		<img id="setting" src="http://fc05.deviantart.net/fs70/i/2011/109/9/1/canterlot_sunset___wallpaper_by_crappyunicorn-d3ece2n.jpg" height="500" width="710">
 	</div>
-	<div class="column span-4">
+	<span class="column span-4 last">
 		<ul id="ponies"></ul>
-	</div>
+	</span>
 </div>

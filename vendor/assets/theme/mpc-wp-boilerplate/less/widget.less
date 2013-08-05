@@ -1,0 +1,172 @@
+/* ---------------------------------------------------------------- */
+/*	11. Widgets
+/* ---------------------------------------------------------------- */
+#mpcth_page_wrap {
+
+	.widget_quick-flickr-widget {
+
+		.widget_title { margin-bottom: 12px; }
+
+		.quick-flickr-item {
+			float: left;
+			width: 79px;
+			height: 79px;
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		overflow: hidden;
+
+		.quick-flickr-item {
+			margin-bottom: 5px;
+			margin-right: 5px;
+
+			img {
+				border-radius: 3px;
+				-webkit-transition: all .15s ease-out;
+				   -moz-transition: all .15s ease-out;
+				    -ms-transition: all .15s ease-out;
+				     -o-transition: all .15s ease-out;
+				        transition: all .15s ease-out;
+			}
+
+			&:hover {
+				img { border-radius: 45px; }
+			}
+		}
+	}
+
+	#mpcth_footer {
+		.mpcth-recent-post {
+			.mpcth-recent-posts-title { 
+				color: #FFFFFF; 
+
+				&:hover {
+					color: #48C78B;
+				}
+			}
+		}
+
+		.widget_quick-flickr-widget { 
+			.quick-flickr-item {
+				width: 67px;
+				height: 67px;
+			}
+		}
+	}
+	
+	.mpcth-recent-posts-widget {
+
+		.widget_title { margin-bottom: 11px; }
+
+		.mpcth-recent-post {
+			clear: both;
+			margin-bottom: 20px;
+
+			.mpcth-recent-post-thumb {
+				float: left;
+				display: inline-block;
+				width: 67px;
+				height: 67px;
+				margin-right: 10px;
+				margin-bottom: 5px;
+
+				img {
+					width: 100%;
+					height: 100%;
+					border-radius: 3px;
+					-webkit-transition: all .15s ease-out;
+					   -moz-transition: all .15s ease-out;
+					    -ms-transition: all .15s ease-out;
+					     -o-transition: all .15s ease-out;
+					        transition: all .15s ease-out;
+				}
+
+				&:hover {
+					img {
+						border-radius: 45px;
+					}
+				}
+			}
+
+			.mpcth-recent-posts-title {
+				position: relative;
+				
+				font-family: 'Open Sans', Helvetica, Arial;
+				font-weight: 600;
+				color: #666666;
+
+				&:hover { color: #48C78B; }
+			}
+
+			.mpcth-recent-posts-data {
+				font-size: 12px;
+				display: block;
+				margin: -1px 0px 5px 0px;
+			}
+		}
+	}
+
+	.mpcth-twitter-widget .mpcth-twitter-wrap {
+		.tweet {
+			position: relative;
+			overflow: hidden;
+			margin-bottom: 10px;
+			padding-left: 40px;
+
+			&:before {
+				position: absolute;
+				top: 5px;
+				left: 0px;
+				color: #eeeeee;
+				font-size: 1.5em;
+			}
+
+			.header {
+				overflow: hidden;
+				margin-bottom: 5px;
+
+				.avatar {
+					display: none;
+				}
+
+				.full-name {
+					display: none;
+				}
+
+				.p-nickname {
+					display: none;
+				}
+			}
+
+			.e-entry-content {
+				clear: both;
+				font-style: italic;
+
+				> p {
+					margin-bottom: 0px !important;
+				}
+
+				b {
+					font-weight: normal;
+				}
+
+				.retweet-credit {
+					text-align: right;
+				}
+			}
+
+			.permalink {
+				float: right;
+				font-size: 12px;
+			}
+
+			&.last {
+				margin-bottom: 0px;
+			}
+		}
+	}
+}

@@ -1,0 +1,73 @@
+//	Variables
+
+// ======================================================
+// GLOBAL
+// ======================================================
+
+// Main Setup 
+@pageWidth: 		960px;  // if fixed it will be centered, if FLUID ignore it
+
+@defaultFontFamily: 'PT Sans', 'Helvetica', Arial, sans-serif;
+@headingFontFamily: 'Open Sans', 'Helvetica', Arial, sans-serif;
+
+// ======================================================
+// HEADER LAYOUT
+// ======================================================
+
+// Logo
+@logoPlacement: 		header; 	// header or page
+@logoPosition: 			left;		// left, right, center 
+
+// Secondary Menu
+@secondaryMenuPosition: left; 		// left, right or center
+
+// Main Menu
+@menuPlacement: 		header; 	// header or page
+@menuPosition: 			right; 		// left, right, center 
+
+// When menu placement = page, use this settings to setup the menu aside section
+@menuAsideWidth: 		0px; 		// if menu is not placed in the aside section, SET IT TO 0px !!! 
+
+// ======================================================
+// SIDEBAR & FOOTER
+// ======================================================
+
+// Sidebar
+@sidebarBorder: 	 0px; 			// just border width
+@sidebarWidth: 		 270px;			// sidebar width
+@sidebarContentGap:	 10px; 			// gap bettwen sidebar and content, set on left or right parameter
+@sidebarPadding:	 0px; 			// padding from the content side
+
+// Footer 
+@footerMaxWidth: 	960px;			// max width of footer
+
+// ======================================================
+// Socials
+// ======================================================
+
+@socialIconFont:		16px; 	 	// social icon font size 
+@socialRatio: 			1.75em;	 	// icon ratio 
+@socialIconPosBottom:	0.16em;	 	// icon position from the bottom 
+@socialIconPosLeft:		0.38em;  	// icon position left 
+@socialBreak:			5px;	 	// break between icons 
+@socialIconColor:		white; 		// social icon color  
+@socialIconHoverColor:  #48C78B; 	// social hover icon color 
+@socialIconHoverColorH: #CCCCCC; 	// social hover icon color
+
+/* ---------------------------------------------------------------- */
+/* Functions
+/* ---------------------------------------------------------------- */
+
+.animations (@elements: all) {
+	-webkit-transition: @elements .25s ease-out;
+	-moz-transition: @elements .25s ease-out;
+	-ms-transition: @elements .25s ease-out;
+	-o-transition: @elements .25s ease-out;
+	transition: @elements .25s ease-out;
+}
+
+.box-sizings {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}

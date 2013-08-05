@@ -1,0 +1,130 @@
+/* ---------------------------------------------------------------- */
+/*	9. Footer + Top Widget Area
+/* ---------------------------------------------------------------- */
+
+#mpcth_footer { 
+	clear: both;
+	width: 100%;
+	position: relative;
+	padding-top: 2.5em;
+	color: #ffffff;
+	overflow: hidden;
+
+	li h5.widget_title {
+		text-transform: uppercase;
+		color: #FFFFFF;
+		font-weight: 600;
+		margin-bottom: 15px;
+		padding-bottom: 10px;
+	}
+
+	div.textwidget { font-style: italic; }
+
+	#mpcth_footer_toggleable_info {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		line-height: 2.5em;
+		text-align: center;
+		-webkit-font-smoothing: antialiased;
+		opacity: 0.25;
+		filter: alpha(opacity=25);
+
+		.animations;
+	}
+
+	&:hover {
+		#mpcth_footer_toggleable_info {
+			opacity: 0;
+			filter: alpha(opacity=0);
+		}
+	}
+
+	#mpcth_footer_content_hidder {
+		margin-top: -2.5em;
+		height: 1.5em;
+	}
+
+	#mpcth_footer_content.mpcth-footer-hidden {
+		display: none;
+	}
+
+	#mpcth_bottom_footer {
+		height: 45px;
+		-webkit-font-smoothing: antialiased;
+
+		#mpcth_bottom_footer_content {
+			width: 960px;
+			margin: 0 auto;
+			line-height: 45px;
+
+			span.mpcth-footer-copyright { font-style: italic; }
+
+			.mpcth-social-icons {
+				top: 9px;
+			}
+		}
+
+		overflow: hidden;
+	}
+}
+
+#mpcth_top_widget_area,
+#mpcth_footer_content {
+	max-width: @footerMaxWidth;
+	margin: 0 auto;
+
+	.mpcth-widget-column {
+		float: left;
+		
+		&.mpcth-widget-columns-1 {
+			width: 100%; 
+			margin-right: 0%;
+		}
+		&.mpcth-widget-columns-2 {
+			width: 47.5%;
+			margin-right: 5%;
+		}
+		&.mpcth-widget-columns-3 {
+			width: 30%;
+			margin-right: 5%;
+		}
+		&.mpcth-widget-columns-4 {
+			width: 21.25%;
+			margin-right: 5%;
+		}
+		&.mpcth-widget-columns-5 {
+			width: 16%;
+			margin-right: 5%;
+		}
+
+		&.mpcth-widget-column-last {
+			margin-right: 0px;
+		}
+
+		.widget {
+			line-height: 1.3em;
+			margin-bottom: 3em;
+		}
+	}
+
+	ul, ol { list-style: none; margin: 0px;}
+	> ul ul ul { margin-left: 20px; }
+
+	img { max-width: 100%; height: auto;}
+	select { max-width: 100%; }
+}
+
+.mpcth-layout-fixed #mpcth_footer_content { width: @pageWidth; }
+#mpcth_bottom_footer { clear: both; }
+
+#mpcth_top_widget_area {
+	#mpcth_top_widget_area_widgets {
+		display: none;
+	}
+	#mpcth_top_widget_area_handle {
+		cursor: pointer;
+		height: 20px;
+	}
+}

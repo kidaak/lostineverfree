@@ -1,0 +1,85 @@
+/* ---------------------------------------------------------------- */
+/*	8. Sidebar
+/* ---------------------------------------------------------------- */
+
+#mpcth_sidebar {
+	position: relative;
+	width: 252px;
+	padding-left: @sidebarPadding;
+	top: 6px;
+	background: transparent;
+	margin-top: 15px;
+
+	ul, ol { list-style: none; margin: 0px;}
+	> ul ul ul { margin-left: 20px; }
+
+	> ul  {
+		> li {
+			margin-bottom: 25px;
+			line-height: 1.5em;
+
+			h5 { 
+				margin-bottom: 8px; 
+				font-weight: 600;
+				border-bottom: 1px solid #eeeeee;
+				padding-bottom: 5px;
+			}
+			
+			&.widget_search {
+				width: 100%;
+
+				#searchsubmit { 
+					background: #5DB7DC;
+					color: white;
+					padding: 4px 8px; 
+					display: none;
+				}
+
+				.mpcth-search {
+					background: #F9F9F9;
+					border-radius: 3px;
+					border-bottom: 2px solid #e5e5e5;
+					padding: 6px 8px;
+					width: 100%;
+					font-style: italic;
+					color: #666666;
+
+					.box-sizings;
+					.animations;
+
+					&:focus,
+					&:hover {
+						background: #f3f3f3;
+						border-bottom-color: #dfdfdf;
+					}
+				}
+			}
+
+			&.widget_text .textwidget {
+				font-style: italic;
+			}
+
+			&.widget_quick-flickr-widget {
+				
+			}
+		}
+	}	
+
+	.widget {
+		max-width: @sidebarWidth - @sidebarContentGap - @sidebarPadding;
+
+		img,
+		select { max-width: @sidebarWidth - @sidebarContentGap - @sidebarPadding; height: auto;}
+
+		&.widget_rss {
+			> ul > li { margin-bottom: 15px;}
+		}
+	}
+}
+
+.mpcth-sidebar-left #mpcth_sidebar {
+	left: 0px;
+	border-left: none;
+	padding: 0px;
+	padding-right: @sidebarPadding;
+}

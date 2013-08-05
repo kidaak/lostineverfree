@@ -1,0 +1,92 @@
+/* ---------------------------------------------------------------- */
+/*	3. Layout
+/* ---------------------------------------------------------------- */
+
+#mpcth_page_container {
+	position: relative;
+	z-index: 0;
+	clear: both;
+}
+
+/* fluid layout - sidebar: left, right, none */
+.mpcth-layout-fluid #mpcth_page_container { 
+	width: 100%; 
+
+	// sidebar left 
+	&.mpcth-sidebar-left {
+		#mpcth_page_content { 
+				width:100%;
+				float: left;
+				
+				#mpcth_page_articles { margin-left: @sidebarWidth + @menuAsideWidth + @sidebarContentGap; }
+			}
+
+		#mpcth_sidebar { margin-left: -100%;  left: @menuAsideWidth; float: left; }
+	}
+
+	// sidebar right 
+	&.mpcth-sidebar-right { 
+		#mpcth_page_content { 
+			float: right; 
+			width: 100%;
+
+			#mpcth_page_articles { margin-right: @sidebarWidth + @sidebarContentGap; margin-left: @menuAsideWidth; }
+		}
+
+		#mpcth_sidebar { margin-right: -100%; float: right; }
+	}
+
+	// sidebar none 
+	&.mpcth-sidebar-none { 
+		#mpcth_page_content { 
+			float: right; 
+			width: 100%;
+
+			#mpcth_page_articles { margin-left: @menuAsideWidth; }
+		}
+	}
+}
+
+/* fixed layout - sidebar: left, right */
+.mpcth-layout-fixed  #mpcth_page_container {
+	width: @pageWidth; 
+	margin: 0 auto;
+
+	#mpcth_page_content { width: @pageWidth - @sidebarWidth - @menuAsideWidth - @sidebarContentGap; }
+	
+	// sidebar left 
+	&.mpcth-sidebar-left { 
+		#mpcth_page_content { float: right; }
+		#mpcth_sidebar { float: left; }
+	}
+
+	// sidebar right 
+	&.mpcth-sidebar-right { 
+		#mpcth_page_content { float: left; }
+		#mpcth_sidebar { float: right; }
+	}
+
+	&.mpcth-sidebar-none {
+		#mpcth_page_content { width: 100%; }
+	}
+}
+
+.page-template-portfolio-template-php .mpcth-layout-fixed  #mpcth_page_container.mpcth-sidebar-left,
+.page-template-portfolio-template-php .mpcth-layout-fixed  #mpcth_page_container.mpcth-sidebar-right {
+	#mpcth_page_content { width: @pageWidth - @sidebarWidth - @menuAsideWidth - @sidebarContentGap; }
+}
+
+/* menu aside */
+.mpcth-layout-fluid #mpcth_aside_menu_section {
+	width: @menuAsideWidth; 
+	float: left;
+	margin-right: -100%;
+}
+
+.mpcth-layout-fixed #mpcth_aside_menu_section {
+	width: @menuAsideWidth;
+	float: left;
+}
+
+/* clear fix */
+.mpcth-clear-fix { clear: both; }
