@@ -30,6 +30,8 @@
 	<button id="pony_up">Pony Up!</button>
 </div>
 
+	<div id="venue" class="column span-18"></div>
+	
 	<span class="column span-4 last">
 		<ul id="ponies"></ul>
 	</span>
