@@ -23,6 +23,7 @@ class Mlp.Views.PoniesIndex extends Backbone.View
 
   ponyUp: (event) ->
     event.preventDefault()
+    @collection.ponyDown()
     @collection.ponyUp()
 
   changeSetting: (event) ->

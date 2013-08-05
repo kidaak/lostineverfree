@@ -20,6 +20,12 @@
 
 <button id="pony_up">Pony Up!</button>
 
-<ul id="ponies"></ul>
 
-<img id="setting" src="http://fc05.deviantart.net/fs70/i/2011/109/9/1/canterlot_sunset___wallpaper_by_crappyunicorn-d3ece2n.jpg">
+<div class="container">
+	<div class="column span-4">
+		<img id="setting" src="http://fc05.deviantart.net/fs70/i/2011/109/9/1/canterlot_sunset___wallpaper_by_crappyunicorn-d3ece2n.jpg">
+	</div>
+	<div class="column span-4">
+		<ul id="ponies"></ul>
+	</div>
+</div>

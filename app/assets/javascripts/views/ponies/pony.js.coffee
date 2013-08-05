@@ -18,6 +18,5 @@ class Mlp.Views.Pony extends Backbone.View
     @$('.selected').addClass('saddled')
 
   render: =>
-    console.log(this)
     $(@el).html(@template(pony: this.model))
     this

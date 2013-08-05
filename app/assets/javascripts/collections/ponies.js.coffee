@@ -7,4 +7,6 @@ class Mlp.Collections.Ponies extends Backbone.Collection
     console.log(selected)
     selected.select() if selected
 
-  
+  ponyDown: ->
+    for model in this.models
+      model.deselect()
