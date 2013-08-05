@@ -1,7 +1,7 @@
 class Mlp.Views.Pony extends Backbone.View
   template: JST['ponies/pony']
   tagName: 'li'
-  className: 'pony'
+  className: 'pony_list_item'
 
   events:
     'click': 'showPony'

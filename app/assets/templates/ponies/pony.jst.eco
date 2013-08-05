@@ -1,7 +1,13 @@
 <hr>
-  <%= @pony.get('name') %>
+  <p>
+    <%= @pony.get('name') %>
+  </p>
+  </p>
     <img src="<%= @pony.get('img_url') %>" alt="shutterfly" height="70" width="70">
-  <% if @pony.get('selected'): %>
-    <span class="selected">SELECTED</span>
-  <% end %>
+  </p>
+  <p>
+    <% if @pony.get('selected'): %>
+      <span class="selected">SELECTED</span>
+    <% end %>
+  </p>
 </hr>

@@ -1,4 +1,4 @@
-class Mlp.Routers.Ponies extends Backbone.Router
+class Mlp.Routers.Application extends Backbone.Router
 	routes:
 		'': 'index'
 		'ponies/:id': 'show'

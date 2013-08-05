@@ -8,6 +8,7 @@ class Mlp.Views.PoniesIndex extends Backbone.View
     'click #pony_up': 'ponyUp'
 
   initialize: ->
+    console.log(Mlp.Collections.Settings)
     @collection.on('reset', @render, this)
     @collection.on('add', @appendPony, this)
     @collection.on('change', @render, this)
@@ -20,6 +21,10 @@ class Mlp.Views.PoniesIndex extends Backbone.View
   appendPony: (pony) =>
     view = new Mlp.Views.Pony(model: pony)
     @$('#ponies').append(view.render().el)
+
+  appendSetting: (pony) =>
+    view = new Mlp.Views.Setting(model: setting)
+    @$('#venue').append(view.render().el)
 
   ponyUp: (event) ->
     event.preventDefault()
@@ -34,12 +39,26 @@ class Mlp.Views.PoniesIndex extends Backbone.View
     console.log new_src
     setting.src = new_src
 
+  createSetting: (event) ->
+    event.preventDefault()
+
+    attributes =
+      name: $('#new_setting_name').val()
+      img_url: $('#new_setting_url').val()
+
+    options =
+      wait: true
+      error: @handleError    
+
+    @collection.create attributes, options
+
+
   createPony: (event) ->
     event.preventDefault()
 
     attributes = 
-      name: "princess celestia"
-      img_url: "http://www.hasbro.com/mylittlepony/images/carousel/twilight-sparkle-slide.png"
+      name: $('#new_pony_name').val()
+      img_url: $('#new_pony_img_url').val()
 
     options =
       wait: true

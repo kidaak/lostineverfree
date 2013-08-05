@@ -10,8 +10,8 @@
 			<input type="text" name="name" id="new_pony_name">
 			<label>Image url:</label>
 			<input type="text" name="img_url" id="new_pony_img_url">
-			<div class="mpcth-sc-button mpcth-sc-button-size-normal">
-				<input type="submit" value="Add">
+			<div class="wpb_wrapper">
+				<input type="submit" class="mpcth-sc-button mpcth-sc-button-size-normal" value="Add">
 			</div>
 		</form>
 	</fieldset>
@@ -30,7 +30,7 @@
 	<button id="pony_up">Pony Up!</button>
 </div>
 
-	<div class="column span-18">
+	<div id="venue" class="column span-18">
 		<img id="setting" src="http://fc05.deviantart.net/fs70/i/2011/109/9/1/canterlot_sunset___wallpaper_by_crappyunicorn-d3ece2n.jpg" height="500" width="710">
 	</div>
 	<span class="column span-4 last">
