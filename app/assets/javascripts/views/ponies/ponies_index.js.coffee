@@ -22,10 +22,6 @@ class Mlp.Views.PoniesIndex extends Backbone.View
     view = new Mlp.Views.Pony(model: pony)
     @$('#ponies').append(view.render().el)
 
-  appendSetting: (pony) =>
-    view = new Mlp.Views.Setting(model: setting)
-    @$('#venue').append(view.render().el)
-
   ponyUp: (event) ->
     event.preventDefault()
     @collection.ponyDown()
@@ -38,20 +34,6 @@ class Mlp.Views.PoniesIndex extends Backbone.View
     console.log setting
     console.log new_src
     setting.src = new_src
-
-  createSetting: (event) ->
-    event.preventDefault()
-
-    attributes =
-      name: $('#new_setting_name').val()
-      img_url: $('#new_setting_url').val()
-
-    options =
-      wait: true
-      error: @handleError    
-
-    @collection.create attributes, options
-
 
   createPony: (event) ->
     event.preventDefault()
