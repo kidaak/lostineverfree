@@ -15,7 +15,7 @@ class Mlp.Routers.Application extends Backbone.Router
 			$('#container').html(view.render().el)
 		@settings.fetch success: =>
 		  view = new Mlp.Views.SettingsIndex(collection: @settings)
-		  $('#container').html(view.render().el)
+		  $('#container').append(view.render().el)
 
 	show: (id) ->
 		alert "Pony #{id}"
