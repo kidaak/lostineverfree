@@ -1,6 +1,7 @@
 class Mlp.Views.Pony extends Backbone.View
   template: JST['ponies/pony']
   tagName: 'li'
+  className: 'pony'
 
   events:
     'click': 'showPony'
@@ -13,7 +14,7 @@ class Mlp.Views.Pony extends Backbone.View
     Backbone.history.navigate("ponies/#{@model.get('id')}", true)
 
   selectPony: ->
-    $('.selected').removeClass('saddled')
+    $('.pony').removeClass('saddled')
     @$('.selected').addClass('saddled')
 
   render: =>

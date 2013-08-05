@@ -4,6 +4,7 @@ class Mlp.Collections.Ponies extends Backbone.Collection
 
   ponyUp: ->
     selected = @shuffle()[0]
+    console.log(selected)
     selected.select() if selected
 
   

@@ -15,7 +15,6 @@ end
 
 def create
   @pony = Pony.create(params[:pony])
-  @pony.save
 	respond_with @pony
 end
 

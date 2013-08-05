@@ -35,15 +35,16 @@ class Mlp.Views.PoniesIndex extends Backbone.View
 
   createPony: (event) ->
     event.preventDefault()
-    pony = new Mlp.Models.Pony()
-    pony.name = "pony"
-    pony.img_url = "http://www.hasbro.com/mylittlepony/images/carousel/twilight-sparkle-slide.png"
-    pony.save
-    console.log(pony)
-    @collection.create pony,
+
+    attributes = 
+      name: "princess celestia"
+      img_url: "http://www.hasbro.com/mylittlepony/images/carousel/twilight-sparkle-slide.png"
+
+    options =
       wait: true
-      success: -> $('#new_pony')[0].reset()
-      error: @handleError
+      error: @handleError    
+
+    @collection.create attributes, options
 
   handleError: (pony, response) -> 
     if response.status == 422
