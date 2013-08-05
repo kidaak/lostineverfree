@@ -1,5 +1,4 @@
 class Mlp.Views.Pony extends Backbone.View
-
   template: JST['ponies/pony']
   tagName: 'li'
 
@@ -17,9 +16,7 @@ class Mlp.Views.Pony extends Backbone.View
     $('.selected').removeClass('saddled')
     @$('.selected').addClass('saddled')
 
-	render: =>
-    $(@el).html(@template())
-    console.log("before")
+  render: =>
     console.log(this)
-    console.log("after")
+    $(@el).html(@template(pony: this.model))
     this

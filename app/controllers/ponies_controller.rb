@@ -1,5 +1,5 @@
 class PoniesController < ApplicationController
-respond_to :json
+respond_to :html, :json
 
 def new
 	respond_with Pony.new
@@ -14,8 +14,9 @@ def show
 end
 
 def create
-	console.log(params.inspect)
-	respond_with Pony.create(params[:pony])
+  @pony = Pony.create(params[:pony])
+  @pony.save
+	respond_with @pony
 end
 
 def update

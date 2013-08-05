@@ -1,1 +1,2 @@
-<h1>Pony</h1>
+<%= @pony.get('name') %>
+<img src="<%= @pony.get('img_url') %>" alt="Pony" height="100" width="100">
