@@ -10,9 +10,11 @@ class Mlp.Routers.Application extends Backbone.Router
 		@settings.rest($('#container').data('settings'))
 
 	index: ->
+		gameview = new Mlp.Views.Game()
+		$('#container').html(gameview.render().el)
 		@ponies.fetch success: =>
 			view = new Mlp.Views.PoniesIndex(collection: @ponies)
-			$('#container').html(view.render().el)
+			$('#ponies').html(view.render().el)
 		@settings.fetch success: =>
 		  view = new Mlp.Views.SettingsIndex(collection: @settings)
 		  $('#venue').html(view.render().el)

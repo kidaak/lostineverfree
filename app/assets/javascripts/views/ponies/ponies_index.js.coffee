@@ -1,6 +1,7 @@
 class Mlp.Views.PoniesIndex extends Backbone.View
 
-  template: JST['ponies/index']
+  formTemplate: JST['ponies/form']
+  poniesTemplate: JST['ponies/index']
 
   events:
     'submit #new_pony': 'createPony'
@@ -13,7 +14,7 @@ class Mlp.Views.PoniesIndex extends Backbone.View
     @collection.on('change', @render, this)
 
   render: ->
-    $(@el).html(@template())
+    $(@el).html(@poniesTemplate())
     @collection.each(@appendPony)
     this
 

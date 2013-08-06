@@ -1,3 +1,4 @@
+
   <fieldset>
     <legend>New Pony</legend>
     <form id="new_pony" class="inline">
@@ -12,7 +13,3 @@
   </fieldset>
 
   <button id="pony_up">Pony Up!</button>
-
-	<span class="column span-4 last">
-		<ul id="ponies"></ul>
-	</span>
