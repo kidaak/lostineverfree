@@ -2,8 +2,8 @@
 
 <h1>My Little Pony</h1>
 
-  <div id="ponies"></div>
+  <div id="friends"></div>
 
-  <div id="venue" class="column span-18"></div>
+  <div id="venue" class="column span-20"></div>
 
 </div>

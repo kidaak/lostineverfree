@@ -1,1 +1,5 @@
-<h3>Setting</h3>
+<img src="<%= @setting.get('img_url') %>" alt="canterlot" height="600" width="790">
+
+<% if @setting.get('selected'): %>
+  <span class="selected">SELECTED</span>
+<% end %>

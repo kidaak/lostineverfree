@@ -1,6 +1,5 @@
 class Mlp.Views.PoniesIndex extends Backbone.View
 
-  formTemplate: JST['ponies/form']
   poniesTemplate: JST['ponies/index']
 
   events:

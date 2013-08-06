@@ -1,3 +1,4 @@
+  <button id="change_of_venue">Change Venue!</button>
 
   <fieldset>
     <legend>Change Setting</legend>
@@ -10,4 +11,4 @@
     </form>
   </fieldset>
   
-    <img id="setting" src="http://fc05.deviantart.net/fs70/i/2011/109/9/1/canterlot_sunset___wallpaper_by_crappyunicorn-d3ece2n.jpg" height="500" width="710">
+    <div id="setting"></div>
