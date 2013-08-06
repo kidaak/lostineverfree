@@ -7,6 +7,7 @@ class Mlp.Views.SettingsIndex extends Backbone.View
     'click #change_of_venue': 'randomSetting'
 
   initialize: ->
+    @collection.randomSetting()
     @collection.on('reset', @render, this)
     @collection.on('add', @appendSetting, this)
     @collection.on('change', @render, this)
