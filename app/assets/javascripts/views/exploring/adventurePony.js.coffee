@@ -1,5 +1,5 @@
 class Mlp.Views.adventurePony extends Backbone.View
-  template: JST['riding/adventurePony']
+  template: JST['exploring/adventurePony']
 
   initialize: ->
     console.log("gimme the loot")

@@ -1,5 +1,5 @@
 class Mlp.Views.everFree extends Backbone.View
-  template: JST['riding/everFree']
+  template: JST['exploring/everFree']
 
   render: ->
     $(@el).html(@template())
