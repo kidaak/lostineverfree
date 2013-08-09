@@ -10,5 +10,3 @@ class Mlp.Collections.Settings extends Backbone.Collection
   randomReset: ->
     for model in this.models
       model.deselect()
-
-  getEverFree: ->

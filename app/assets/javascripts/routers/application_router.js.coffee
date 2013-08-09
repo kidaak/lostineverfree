@@ -10,6 +10,7 @@ class Mlp.Routers.Application extends Backbone.Router
     @settings = new Mlp.Collections.Settings()
     @settings.reset($('#container').data('settings'))
 
+
   index: ->
     gameview = new Mlp.Views.Game()
     $('#container').html(gameview.render().el)

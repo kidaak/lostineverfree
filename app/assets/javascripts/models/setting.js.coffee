@@ -8,3 +8,7 @@ class Mlp.Models.Setting extends Backbone.Model
   deselect: ->
     @set(selected: false)
     @save()
+
+  inEverfree: ->
+    console.log("in everfree")
+    @get('in_everfree')
