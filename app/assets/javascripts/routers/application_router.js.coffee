@@ -4,6 +4,7 @@ class Mlp.Routers.Application extends Backbone.Router
     'ponies/:id': 'show'
 
   initialize: ->
+    Mlp.vent.on('click', @riding, this)
     @ponies = new Mlp.Collections.Ponies()
     @ponies.reset($('#container').data('ponies'))
     @settings = new Mlp.Collections.Settings()
@@ -23,7 +24,12 @@ class Mlp.Routers.Application extends Backbone.Router
     console.log("Pony #{id}")
     @pony = @ponies.get(id)
     console.log(@pony)
-    ridingview = new Mlp.Views.Riding(model: @pony)
+
+
+  riding: (clickedpony) ->
+    event.preventDefault()
+    console.log("wassup b")
+    ridingview = new Mlp.Views.Riding(model: clickedpony)
     $('#container').html(ridingview.render().el)
 
 
