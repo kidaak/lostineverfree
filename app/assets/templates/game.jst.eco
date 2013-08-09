@@ -1,9 +1,6 @@
-<div class="container">
 
-<h1>My Little Pony</h1>
 
   <div id="friends"></div>
 
   <div id="venue" class="column span-20"></div>
 
-</div>

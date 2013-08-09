@@ -29,7 +29,7 @@ class Mlp.Routers.Application extends Backbone.Router
   exploring: (clickedpony) ->
     event.preventDefault()
     console.log("wassup b")
-    exploringview = new Mlp.Views.Exploring(model: clickedpony)
+    exploringview = new Mlp.Views.Exploring(collection: @settings, model: clickedpony)
     $('#container').html(exploringview.render().el)
 
 

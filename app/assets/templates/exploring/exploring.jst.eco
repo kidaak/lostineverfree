@@ -1,5 +1,8 @@
-<h1>Exploring</h1>
 
-<div id="everFree"></div>
+  <div class="column span-24">
+    <h1>Exploring</h1>
 
-<div id="adventurePony"></div>
+    <div id="ever-free"></div>
+
+    <div id="adventure-pony"></div>
+  </div>
