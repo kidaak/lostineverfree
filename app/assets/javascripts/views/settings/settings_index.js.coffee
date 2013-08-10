@@ -16,6 +16,8 @@ class Mlp.Views.SettingsIndex extends Backbone.View
   rideIn: (model) ->
     event.preventDefault()
     console.log(model)
+    this.remove()
+    this.unbind()
 
   createSetting: (event) ->
     event.preventDefault() 

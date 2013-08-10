@@ -1,9 +1,7 @@
-<div class='navigate'>
+<div>
   <button class='navigate'>north</button>
   <button class='navigate'>south</button>
   <button class='navigate'>east</button>
   <button class='navigate'>west</button>
 </div>
-<img src="<%= @scene.get('img_url') %>" alt="everfree" width="950">
-
-<%= @scene.get('name') %>
+<div id="everfree-scene"></div>

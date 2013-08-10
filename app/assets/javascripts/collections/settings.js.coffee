@@ -11,5 +11,8 @@ class Mlp.Collections.Settings extends Backbone.Collection
     for model in this.models
       model.deselect()
 
-  navigate: (setting, direction) ->
-    console.log(this.where id: setting.get("#{direction}"))
+  navigate: (previous, direction) ->
+    console.log("navigating...")
+    next = this.where id: previous.get("#{direction}")
+    previous.deselect()
+    next[0].select()

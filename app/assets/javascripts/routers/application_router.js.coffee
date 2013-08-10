@@ -28,6 +28,7 @@ class Mlp.Routers.Application extends Backbone.Router
 
 
   exploring: (clickedpony) ->
+    console.log(this)
     actionview = new Mlp.Views.Action()
     $('#container').html(actionview.render().el)
     @settings.fetch success: =>
