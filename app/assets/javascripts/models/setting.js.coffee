@@ -1,4 +1,5 @@
 class Mlp.Models.Setting extends Backbone.Model
+  collection: Mlp.Collections.Settings
 
   select: ->
     @set(selected: true)

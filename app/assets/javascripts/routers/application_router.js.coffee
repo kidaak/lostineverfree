@@ -12,8 +12,8 @@ class Mlp.Routers.Application extends Backbone.Router
 
 
   index: ->
-    gameview = new Mlp.Views.Game()
-    $('#container').html(gameview.render().el)
+    mainview = new Mlp.Views.Main()
+    $('#container').html(mainview.render().el)
     @ponies.fetch success: =>
       view = new Mlp.Views.PoniesIndex(collection: @ponies)
       $('#friends').html(view.render().el)
@@ -22,15 +22,18 @@ class Mlp.Routers.Application extends Backbone.Router
       $('#venue').html(view.render().el)
 
   show: (id) ->
-    console.log("Pony #{id}")
+    console.log("Showing Pony #{id}")
     @pony = @ponies.get(id)
     console.log(@pony)
 
 
   exploring: (clickedpony) ->
-    event.preventDefault()
-    console.log("wassup b")
-    exploringview = new Mlp.Views.Exploring(collection: @settings, model: clickedpony)
-    $('#container').html(exploringview.render().el)
+    actionview = new Mlp.Views.Action()
+    $('#container').html(actionview.render().el)
+    @settings.fetch success: =>
+      everfreeview = new Mlp.Views.EverFree(collection: @settings)
+      $('#background').html(everfreeview.render().el)
+    heroineview = new Mlp.Views.Heroine(model: clickedpony)
+    $('#heroine').html(heroineview.render().el)
 
 

@@ -16,8 +16,15 @@ Pony.create!(name: "Rainbow Dash", img_url: "http://www.hasbro.com/mylittlepony/
 Pony.create!(name: "Princess Celestia", img_url: "http://www.hasbro.com/mylittlepony/images/carousel/princesscelestia-slide.png")
 
 
-Setting.create!(name: "Canterlot Sunset", img_url:"http://fc05.deviantart.net/fs70/i/2011/109/9/1/canterlot_sunset___wallpaper_by_crappyunicorn-d3ece2n.jpg")
-Setting.create!(name: "Canterlot Midday", img_url:"http://images3.wikia.nocookie.net/__cb20120612084332/mlp/pl/images/6/66/Canterlot.png")
-Setting.create!(name: "Canterlot Winter", img_url:"http://images1.wikia.nocookie.net/__cb20111219011851/mlp/images/9/98/Canterlot_Entrance_S2E11.png")
+Setting.create!(in_everfree: false, name: "Canterlot Sunset", img_url:"http://fc05.deviantart.net/fs70/i/2011/109/9/1/canterlot_sunset___wallpaper_by_crappyunicorn-d3ece2n.jpg")
+Setting.create!(in_everfree: false, name: "Canterlot Midday", img_url:"http://images3.wikia.nocookie.net/__cb20120612084332/mlp/pl/images/6/66/Canterlot.png")
+Setting.create!(in_everfree: false, name: "Canterlot Winter", img_url:"http://images1.wikia.nocookie.net/__cb20111219011851/mlp/images/9/98/Canterlot_Entrance_S2E11.png")
+Setting.create!(in_everfree: false, name: "Canterlot Street By Night", img_url:"http://fc00.deviantart.net/fs71/i/2012/166/e/7/ye_olde_canterlot_by_spiritto-d53lwox.png")
+Setting.create!(in_everfree: false, name: "Canterlot Street By Day", img_url:"http://images3.wikia.nocookie.net/__cb20121212070759/mlp/images/e/e0/A_Canterlot_street_S2E9.png")
+Setting.create!(in_everfree: true, name: "Everfree Mirror Pool", img_url:"http://images2.wikia.nocookie.net/__cb20121117175606/mlp/images/7/70/Pinkie_sees_the_Mirror_Pool_S3E03.png")
+Setting.create!(in_everfree: true, name: "Everfree Entrance All Together", img_url:"http://images1.wikia.nocookie.net/__cb20120617213326/mlp/images/2/2c/Entrance_to_the_Everfree_Forest_S1E02.png")
+Setting.create!(in_everfree: true, name: "Everfree Clearing By Night", img_url:"http://th08.deviantart.net/fs70/PRE/i/2012/179/a/9/nightmare_night_in_the_everfree_forest_by_hellswolfeh-d555w4a.png")
+Setting.create!(in_everfree: true, name: "Canterlot Winter", img_url:"http://images1.wikia.nocookie.net/__cb20111219011851/mlp/images/9/98/Canterlot_Entrance_S2E11.png")
+
 
 

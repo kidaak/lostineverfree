@@ -1,10 +1,12 @@
-class Mlp.Views.everFree extends Backbone.View
-  template: JST['exploring/everFree']
+class Mlp.Views.EverFree extends Backbone.View
+  template: JST['exploring/everfree']
+  className: 'everfree-scene'
 
   initialize: ->
-    console.log("Everfree #{@collection}")
-    @collection.getEverfree
+    @everfree = @collection.where in_everfree: true
+    console.log("Everfree #{@everfree[0].get('name')}")
+    
 
   render: ->
-    $(@el).html(@template())
+    $(@el).html(@template(scene: @everfree[0]))
     this

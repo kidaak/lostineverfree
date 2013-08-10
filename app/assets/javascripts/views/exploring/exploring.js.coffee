@@ -3,7 +3,7 @@ class Mlp.Views.Exploring extends Backbone.View
 
   initialize: ->
     console.log('i miss canterlot')
-    console.log(@collection)
+    @everfree = @collection.where in_everfree: true
     @model.on('reset', @render, this)
     console.log(@model)
 
