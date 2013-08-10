@@ -10,3 +10,6 @@ class Mlp.Collections.Settings extends Backbone.Collection
   randomReset: ->
     for model in this.models
       model.deselect()
+
+  navigate: (setting, direction) ->
+    console.log(this.where id: setting.get("#{direction}"))

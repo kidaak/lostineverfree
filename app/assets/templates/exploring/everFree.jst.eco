@@ -1,8 +1,8 @@
-<div>
-  <button id='navigate'>North</button>
-  <button >South</button>
-  <button >East</button>
-  <button >West</button>
+<div class='navigate'>
+  <button class='navigate'>north</button>
+  <button class='navigate'>south</button>
+  <button class='navigate'>east</button>
+  <button class='navigate'>west</button>
 </div>
 <img src="<%= @scene.get('img_url') %>" alt="everfree" width="950">
 

@@ -12,6 +12,8 @@ class Mlp.Views.Pony extends Backbone.View
 
   showPony: ->
     Mlp.vent.trigger('click', @model)
+    this.remove()
+    this.unbind()
 
   selectPony: ->
     $('.pony').removeClass('saddled')

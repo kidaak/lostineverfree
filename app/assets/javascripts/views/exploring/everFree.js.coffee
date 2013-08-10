@@ -3,7 +3,7 @@ class Mlp.Views.EverFree extends Backbone.View
   className: 'everfree-scene'
 
   events:
-    'click #navigate': 'navigate'
+    'click .navigate': 'navigate'
 
   initialize: ->
     @everfree = @collection.where in_everfree: true
@@ -16,5 +16,6 @@ class Mlp.Views.EverFree extends Backbone.View
 
   navigate: (event) ->
     event.preventDefault()
-    console.log("click me again")
-    console.log(@collection.navigate(@current))
+    console.log(@current)
+    direction = event.currentTarget.innerHTML
+    @current = @collection.navigate(@current, direction)
