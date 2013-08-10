@@ -8,7 +8,7 @@ class Mlp.Views.EverFree extends Backbone.View
   initialize: ->
     @collection.randomReset()
     @everfree = @collection.where in_everfree: true
-    @current = @everfree[0].select()
+    @everfree[0].select()
     @collection.on('reset', @render, this)
     @collection.on('change', @render, this)
 
@@ -17,7 +17,7 @@ class Mlp.Views.EverFree extends Backbone.View
     console.log(@current)
     console.log("is there an echo in here? no? damn straight")
     direction = event.currentTarget.innerHTML
-    @collection.navigate(@current, direction)
+    @collection.navigate(@collection.selected(), direction)
   
   appendEverfreeScene: (setting) =>
     console.log("appending")
