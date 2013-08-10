@@ -11,6 +11,12 @@
 }
 
 .center-stage {
-  margin-left: 300px;
-  margin-top: 250px;
+  position: relative;
+  left: 790px;
+  top: 360px;
+}
+
+#heroine {
+  position: absolute;
+  z-index: 2;
 }

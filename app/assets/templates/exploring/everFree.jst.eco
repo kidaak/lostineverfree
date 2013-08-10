@@ -1,3 +1,9 @@
+<div>
+  <button id='navigate'>North</button>
+  <button >South</button>
+  <button >East</button>
+  <button >West</button>
+</div>
 <img src="<%= @scene.get('img_url') %>" alt="everfree" width="950">
 
 <%= @scene.get('name') %>
