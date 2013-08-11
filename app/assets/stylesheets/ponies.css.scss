@@ -14,9 +14,14 @@
   position: relative;
   left: 50%;
   top: 360px;
+  width: 200px;
 }
 
 #heroine {
   position: absolute;
   z-index: 2;
+}
+
+#heroine img {
+    width: 100%;
 }

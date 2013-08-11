@@ -11,4 +11,6 @@ class Mlp.Views.Action extends Backbone.View
     position: (everfree_scene) ->
       console.log("positioning...")
       console.log(everfree_scene)
-      $('#heroine').css("left", "25%")
+      $('#heroine').css("left", everfree_scene.get('pony_position_left'))
+      $('#heroine').css("top", everfree_scene.get('pony_position_top'))
+      $('#heroine').css("width", everfree_scene.get('pony_width'))
