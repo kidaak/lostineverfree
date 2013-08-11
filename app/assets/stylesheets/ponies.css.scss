@@ -8,6 +8,7 @@
 
 .heroine-name {
   color: white;
+  visibility: hidden;
 }
 
 .center-stage {
@@ -24,4 +25,13 @@
 
 #heroine img {
     width: 100%;
+}
+
+.flipped-image {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
 }

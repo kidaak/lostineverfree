@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130811171858) do
+ActiveRecord::Schema.define(:version => 20130811191409) do
 
   create_table "ponies", :force => true do |t|
     t.string   "name"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20130811171858) do
     t.string   "pony_position_left"
     t.string   "pony_position_top"
     t.string   "pony_width"
+    t.boolean  "pony_reversed"
   end
 
 end
