@@ -9,12 +9,16 @@ Setting.create!(in_everfree: true, pony_reversed: true, pony_position_left: "33%
 Setting.create!(in_everfree: true, pony_reversed: false, pony_position_left: "50%", pony_position_top: "330px", pony_width: "150px", north: 6, south: nil, east: nil, west: 2, name: "Everfree Trees With Eyes", img_url:"/assets/everfree_trees_with_eyes.png")
 
 Setting.create!(in_everfree: true, pony_reversed: false, pony_position_left: "50%", pony_position_top: "360px", pony_width: "200px", north: nil, south: nil, east: nil, west: nil, name: "Everfree calm_water", img_url:"/assets/everfree_calm_water.png")
-Setting.create!(in_everfree: true, pony_reversed: false, pony_position_left: "50%", pony_position_top: "360px", pony_width: "200px", north: nil, south: nil, east: nil, west: nil, name: "Everfree Bridge to Village", img_url:"/assets/everfree_bridge_to_village.png")
+Setting.create!(in_everfree: true, pony_reversed: false, pony_position_left: "50%", pony_position_top: "360px", pony_width: "200px", north: nil, south: nil, east: nil, west: nil, name: "Everfree Scary Dogs", img_url:"/assets/everfree_scary_dogs.jpg")
 Setting.create!(in_everfree: true, pony_reversed: false, pony_position_left: "50%", pony_position_top: "360px", pony_width: "200px", north: nil, south: nil, east: nil, west: nil, name: "Everfree Ruins", img_url:"/assets/everfree_ruins.png")
-Setting.create!(in_everfree: true, pony_reversed: false, pony_position_left: "50%", pony_position_top: "360px", pony_width: "200px", north: nil, south: nil, east: nil, west: nil, name: "Everfree Foot of the Mountain", img_url:"/assets/everfree_foot_of_the_mountain.png")
+Setting.create!(in_everfree: true, pony_reversed: false, pony_position_left: "50%", pony_position_top: "360px", pony_width: "200px", north: nil, south: nil, east: nil, west: nil, name: "Everfree Ferns", img_url:"/assets/everfree_ferns.png")
 Setting.create!(in_everfree: true, pony_reversed: false, pony_position_left: "50%", pony_position_top: "360px", pony_width: "200px", north: nil, south: nil, east: nil, west: nil, name: "Everfree Mountain", img_url:"/assets/everfree_mountain.png")
 Setting.create!(in_everfree: true, pony_reversed: false, pony_position_left: "50%", pony_position_top: "360px", pony_width: "200px", north: nil, south: nil, east: nil, west: nil, name: "Everfree Rock", img_url:"/assets/everfree_rock.png")
 Setting.create!(in_everfree: true, pony_reversed: false, pony_position_left: "50%", pony_position_top: "360px", pony_width: "200px", north: nil, south: nil, east: nil, west: nil, name: "Everfree Cliff", img_url:"/assets/everfree_cliff.png")
+Setting.create!(in_everfree: true, pony_reversed: false, pony_position_left: "50%", pony_position_top: "360px", pony_width: "200px", north: nil, south: nil, east: nil, west: nil, name: "Everfree Fallen Tree", img_url:"/assets/everfree_fallen_tree.png")
+Setting.create!(in_everfree: true, pony_reversed: false, pony_position_left: "50%", pony_position_top: "360px", pony_width: "200px", north: nil, south: nil, east: nil, west: nil, name: "Everfree Mini Cliff", img_url:"/assets/everfree_mini_cliff.png")
+Setting.create!(in_everfree: true, pony_reversed: false, pony_position_left: "50%", pony_position_top: "360px", pony_width: "200px", north: nil, south: nil, east: nil, west: nil, name: "Everfree Deep Blue", img_url:"/assets/everfree_deep_blue.png")
+Setting.create!(in_everfree: true, pony_reversed: false, pony_position_left: "50%", pony_position_top: "360px", pony_width: "200px", north: nil, south: nil, east: nil, west: nil, name: "Everfree Between Two Trees", img_url:"/assets/everfree_between_two_trees.png")
 
 
 
