@@ -14,10 +14,11 @@ class Mlp.Views.EverFree extends Backbone.View
 
   navigate: (event) ->
     event.preventDefault()
-    console.log(@current)
-    console.log("is there an echo in here? no? damn straight")
+    console.log("navigating")
     direction = event.currentTarget.innerHTML
-    @collection.navigate(@collection.selected(), direction)
+    new_scene = @collection.navigate(@collection.selected(), direction)
+    Mlp.vent.trigger('everfree:navigated', new_scene)
+
   
   appendEverfreeScene: (setting) =>
     console.log("appending")
