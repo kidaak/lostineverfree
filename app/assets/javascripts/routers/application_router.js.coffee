@@ -32,7 +32,7 @@ class Mlp.Routers.Application extends Backbone.Router
     actionview = new Mlp.Views.Action()
     $('#container').html(actionview.render().el)
     @settings.fetch success: =>
-      everfreeview = new Mlp.Views.EverFree(collection: @settings)
+      everfreeview = new Mlp.Views.Everfree(collection: @settings)
       $('#background').html(everfreeview.render().el)
     heroineview = new Mlp.Views.Heroine(model: clickedpony)
     $('#heroine').html(heroineview.render().el)

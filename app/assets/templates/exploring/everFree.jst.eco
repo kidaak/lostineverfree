@@ -1,8 +1,8 @@
 <h3>Everfree</h3>
-<div>
-  <button class='navigate'>north</button>
-  <button class='navigate'>south</button>
-  <button class='navigate'>east</button>
-  <button class='navigate'>west</button>
+<div id="nav-buttons">
+  <button class='navigate' id="north">north</button>
+  <button class='navigate' id="south">south</button>
+  <button class='navigate' id="east">east</button>
+  <button class='navigate' id="west">west</button>
 </div>
 <div id="everfree-scene"></div>

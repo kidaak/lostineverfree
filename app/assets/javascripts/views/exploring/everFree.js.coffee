@@ -1,4 +1,4 @@
-class Mlp.Views.EverFree extends Backbone.View
+class Mlp.Views.Everfree extends Backbone.View
   template: JST['exploring/everfree']
   className: 'everfree-scene'
 
@@ -18,7 +18,14 @@ class Mlp.Views.EverFree extends Backbone.View
     direction = event.currentTarget.innerHTML
     new_scene = @collection.navigate(@collection.selected(), direction)
     Mlp.vent.trigger('everfree:navigated', new_scene)
-
+    @hideButtons(new_scene)
+  
+  hideButtons: (everfreeScene) ->
+    console.log("hiding buttons...")
+    $('#nav-buttons').children().each ->
+      id = $(this).attr("id")
+      console.log(id)
+      $(this).addClass('hidden') if not everfreeScene.get("#{id}")
   
   appendEverfreeScene: (setting) =>
     console.log("appending")
