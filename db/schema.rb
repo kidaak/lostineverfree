@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130812005749) do
+ActiveRecord::Schema.define(:version => 20130812133232) do
 
   create_table "ponies", :force => true do |t|
     t.string   "name"
@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(:version => 20130812005749) do
   create_table "settings", :force => true do |t|
     t.string   "name"
     t.string   "img_url"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
     t.boolean  "in_everfree"
     t.integer  "north"
     t.integer  "south"
@@ -36,6 +36,10 @@ ActiveRecord::Schema.define(:version => 20130812005749) do
     t.string   "pony_width"
     t.boolean  "pony_reversed"
     t.integer  "pony_id"
+    t.boolean  "cameo_reversed"
+    t.string   "cameo_position_left"
+    t.string   "cameo_position_top"
+    t.string   "cameo_width"
   end
 
 end
