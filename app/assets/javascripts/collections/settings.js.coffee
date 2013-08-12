@@ -14,7 +14,9 @@ class Mlp.Collections.Settings extends Backbone.Collection
   navigate: (previous, direction) ->
     console.log("navigating...")
     next = this.where id: previous.get("#{direction}")
+    console.log("im about to deselect")
     previous.deselect()
+    console.log("i just deselected")
     next[0].select()
     next[0]
 
