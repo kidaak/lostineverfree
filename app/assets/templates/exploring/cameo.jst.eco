@@ -1,0 +1,6 @@
+<p>
+  <img src="<%= @cameo.get('img_url') %>" alt="cameo_pony">
+</p>
+<h2 id="name-o" class="heroine-name">
+  <%= @cameo.get('name') %>
+</h2>

@@ -12,18 +12,14 @@
 }
 
 .center-stage {
-  position: relative;
+  position: absolute;
+  z-index: 2;
   left: 50%;
   top: 340px;
   width: 120px;
 }
 
-#heroine {
-  position: absolute;
-  z-index: 2;
-}
-
-#heroine img {
+.center-stage img {
     width: 100%;
 }
 

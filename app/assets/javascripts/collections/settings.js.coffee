@@ -23,4 +23,16 @@ class Mlp.Collections.Settings extends Backbone.Collection
     selected[0]
   
   assign_cameos: (ponies) ->
-    console.log(ponies)
+    console.log("assigning cameos...")
+    console.log(ponies.models)
+    shuffled_collection = @shuffle()
+    for pony, index in ponies.models
+      setting = shuffled_collection[index]
+      setting.set(pony_id: pony.get('id'))
+      setting.save()
+      console.log("saved #{index}")
+
+  reset_cameos: ->
+    console.log("resetting cameos...")
+    for model in this.models
+      model.set(pony_id: null)

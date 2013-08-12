@@ -1,3 +1,4 @@
 <img src="<%= @scene.get('img_url') %>" alt="everfree" width="950">
 
+
 <%= @scene.get('name') %>

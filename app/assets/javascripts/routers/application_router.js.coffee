@@ -32,10 +32,13 @@ class Mlp.Routers.Application extends Backbone.Router
     actionview = new Mlp.Views.Action()
     $('#container').html(actionview.render().el)
     @settings.fetch success: =>
+      @settings.reset_cameos()
       @settings.assign_cameos(@ponies)
       everfreeview = new Mlp.Views.Everfree(collection: @settings)
       $('#background').html(everfreeview.render().el)
     heroineview = new Mlp.Views.Heroine(model: clickedpony)
     $('#heroine').html(heroineview.render().el)
+    cameoview = new Mlp.Views.Cameo(collection: @ponies)
+
 
 
