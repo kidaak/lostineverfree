@@ -21,3 +21,6 @@ class Mlp.Collections.Settings extends Backbone.Collection
   selected: ->
     selected = this.where selected: true
     selected[0]
+  
+  assign_cameos: (ponies) ->
+    console.log(ponies)
