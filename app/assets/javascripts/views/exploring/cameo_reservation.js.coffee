@@ -8,6 +8,7 @@ class Mlp.Views.CameoReservation extends Backbone.View
 
   render: (pony_id = null) ->
     console.log("rendering cameo_reservation...")
+    @removeCameo
     $(@el).html(@template())
     @appendCameo(pony_id, @collection)
     this
