@@ -6,6 +6,7 @@ class Mlp.Views.Everfree extends Backbone.View
     'click .navigate': 'navigate'
 
   initialize: ->
+    console.log("initializing everfree")
     @collection.randomReset()
     @everfree = @collection.where in_everfree: true
     @everfree[0].select()
@@ -32,7 +33,6 @@ class Mlp.Views.Everfree extends Backbone.View
     console.log(setting)
     view = new Mlp.Views.EverfreeScene(model: setting)
     @$('#everfree-scene').append(view.render().el)
-
 
   render: ->
     console.log("rendering everfree")

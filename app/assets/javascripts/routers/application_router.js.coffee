@@ -38,7 +38,9 @@ class Mlp.Routers.Application extends Backbone.Router
       $('#background').html(everfreeview.render().el)
     heroineview = new Mlp.Views.Heroine(model: clickedpony)
     $('#heroine').html(heroineview.render().el)
-    cameoview = new Mlp.Views.Cameo(collection: @ponies)
+    cameoreservationview = new Mlp.Views.CameoReservation(collection: @ponies)
+    $('#cameo').html(cameoreservationview.render().el)
+
 
 
 
