@@ -4,6 +4,7 @@ class Mlp.Views.EverfreeScene extends Backbone.View
     render: =>
       console.log("rendering everfree_scene...")
       console.log(this.model)
+      debugger
       if this.model.get('selected')
         $(@el).html(@template(scene: this.model))
         Mlp.vent.trigger('everfree_scene:rendered', this.model.get('pony_id'))
