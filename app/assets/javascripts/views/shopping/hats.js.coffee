@@ -1,0 +1,1 @@
+hats.js.coffee

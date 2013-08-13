@@ -37,6 +37,11 @@ class Mlp.Routers.Application extends Backbone.Router
     $('#container').html(shopping_view.render().el)
     fitting_room_view = new Mlp.Views.FittingRoom(model: shopping_pony)
     $('#shopping_pony').html(fitting_room_view.render().el)
+    @clothing_items.fetch success: =>
+      shoes_view = new Mlp.Views.Shoes(collection)
+      $('#shoes-index').html(shoes_view.render().el)
+      hats_view = new Mlp.Views.Hats(collection)
+      $('#hats-index').html(hats_view.render().el)
 
   exploring: (exploring_pony) ->
     console.log("exploring...")
