@@ -21,7 +21,21 @@
 //= require_tree ./collections
 //= require_tree ./views
 //= require_tree ./routers
-//= require_tree .
+//= require collections/ponies
+//= require collections/settings
+//= require models/pony
+//= require models/setting
+//= require routers/application_router
+//= require views/exploring/cameo
+//= require views/exploring/cameo_reservation
+//= require views/exploring/everfree
+//= require views/exploring/everfree_scene
+//= require views/exploring/heroine
+//= require views/ponies/ponies_index
+//= require views/ponies/pony
+//= require views/action
+//= require views/main
+
 
 
 Mlp.vent = _.extend({}, Backbone.Events);
