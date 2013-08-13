@@ -28,6 +28,7 @@ class Mlp.Routers.Application extends Backbone.Router
 
 
   exploring: (clickedpony) ->
+    console.log("exploring...")
     console.log(this)
     actionview = new Mlp.Views.Action()
     $('#container').html(actionview.render().el)
