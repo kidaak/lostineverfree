@@ -1,5 +1,19 @@
-<div id="shopping"></div>
+<hr>
+<button class="column span4" id="shopping">GO SHOPPING</button>
 
-<div id="choice_pony"></div>
+<div class="column span16" id="choice_pony">
+  </p>
+    <img src="<%= @choice_pony.get('img_url') %>" alt="shutterfly" width="600">
+  </p>
+  <p>
+    <% if @choice_pony.get('selected'): %>
+      <span class="selected">SELECTED</span>
+    <% end %>
+  </p>
+    <p>
+    <%= @choice_pony.get('name') %>
+  </p>
+</div>
 
-<div id="exploring"></div>
+<button class="column span4" id="exploring">GO EXPLORING</button>
+</hr>
