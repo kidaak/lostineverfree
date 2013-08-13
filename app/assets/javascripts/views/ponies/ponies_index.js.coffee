@@ -23,8 +23,8 @@ class Mlp.Views.PoniesIndex extends Backbone.View
     this
 
   appendPony: (pony) =>
-    view = new Mlp.Views.Pony(model: pony)
-    @$('#ponies').append(view.render().el)
+    pony_view = new Mlp.Views.Pony(model: pony)
+    @$('#ponies').append(pony_view.render().el)
 
 
   createPony: (event) ->

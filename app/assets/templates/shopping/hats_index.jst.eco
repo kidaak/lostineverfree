@@ -1,1 +1,3 @@
-hats_index.jst.eco
+  <span class="column span-4">
+    <ul class="clothing" id="hats"></ul>
+  </span>

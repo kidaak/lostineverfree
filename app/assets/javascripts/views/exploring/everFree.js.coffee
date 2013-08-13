@@ -39,7 +39,6 @@ class Mlp.Views.Everfree extends Backbone.View
     console.log(@collection)
     console.log(@everfree)
     console.log(@everfreetemplate)
-    debugger
     $(@el).html(@everfreetemplate())
     @appendEverfreeScene(@collection.selected())
     this
