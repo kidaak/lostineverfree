@@ -1,0 +1,13 @@
+<hr>
+<div class="column span-6 shelf" id="shoes-index">
+</div>
+
+<div class="column span-12 fitting-room-inner" id="shopping_pony">
+  <div class="fitting-room-scene">
+    <img src="<%= @shopping_pony.get('img_url') %>" alt="shutterfly" width="180">
+  </div>
+</div>
+
+<div class="column span-6 shelf" id="hats-index">
+</div>
+</hr>

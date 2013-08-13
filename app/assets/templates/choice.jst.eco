@@ -1,5 +1,5 @@
 <hr>
-<button class="column span4" id="shopping">GO SHOPPING</button>
+<button class="column span4" id="go-shopping">GO SHOPPING</button>
 
 <div class="column span16" id="choice_pony">
   </p>
@@ -15,5 +15,5 @@
   </p>
 </div>
 
-<button class="column span4" id="exploring">GO EXPLORING</button>
+<button class="column span4" id="go-exploring">GO EXPLORING</button>
 </hr>

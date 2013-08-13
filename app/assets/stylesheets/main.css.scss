@@ -9,3 +9,36 @@
 .hidden {
   visibility: hidden;
 }
+
+.shelf {
+  display: inline-block;
+  background-image:url('shelf.png');
+  height: 100%;
+  width: 125px;
+  margin-right: 0px !important;
+}
+
+.fitting-room {
+  height: 500px;
+}
+
+.fitting-room-inner {
+  width: 700px;
+  height: 100%;
+  margin-right: 0px !important;
+}
+
+.fitting-room-scene {
+  background-image:url('dressing_room.png');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+.fitting-room-scene img {
+  position: relative;
+  left: 15%;
+  top: 100px;
+  width: 400px;
+}
