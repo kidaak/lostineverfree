@@ -1,3 +1,1 @@
-  <span class="column span-4 last">
-    <ul class="clothing" id="shoes"></ul>
-  </span>
+<ul class="clothing" id="shoes"></ul>

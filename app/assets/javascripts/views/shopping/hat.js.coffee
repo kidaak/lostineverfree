@@ -8,7 +8,8 @@ class Mlp.Views.Hat extends Backbone.View
 
   render: =>
     console.log("rendering hat...")
-    debugger
+    console.log(@el)
+    console.log(this)
     console.log(@model)
     $(@el).html(@template(hat: @model))
     this

@@ -1,5 +1,3 @@
-<hr>
-  </p>
-    <img src="<%= @shoe.get('img_url') %>" alt="shoe" width="250">
-  </p>
-</hr>
+</p>
+  <img src="<%= @shoe.get('img_url') %>" alt="shoe" width="250">
+</p>

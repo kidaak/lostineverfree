@@ -42,12 +42,10 @@ Setting.create!(in_everfree: false, name: "Canterlot Street By Day", img_url:"ht
 ClothingItem.create!(dept: "hats", name: "Blue Bow", img_url:"/assets/hats/bluebow.png")
 ClothingItem.create!(dept: "hats", name: "Cowboy", img_url:"/assets/hats/cowboyhat.png")
 ClothingItem.create!(dept: "hats", name: "Church", img_url:"/assets/hats/finishedchurchhat.png")
-ClothingItem.create!(dept: "hats", name: "Church Green", img_url:"/assets/hats/finishedchurchhatGR.png")
 ClothingItem.create!(dept: "hats", name: "Church Pink", img_url:"/assets/hats/finishedchurchhatPK.png")
-ClothingItem.create!(dept: "hats", name: "Church Yellow", img_url:"/assets/hats/finishedchurchhatYL.png")
 ClothingItem.create!(dept: "hats", name: "Purple Bow", img_url:"/assets/hats/purplebow.png")
 ClothingItem.create!(dept: "hats", name: "Umbrella", img_url:"/assets/hats/umbrella.png")
-ClothingItem.create!(dept: "hats", name: "Bow Seafoam", img_url:"/assets/shoes/bowseafoam.png")
+ClothingItem.create!(dept: "hats", name: "Bow Seafoam", img_url:"/assets/hats/bowseafoam.png")
 
 ClothingItem.create!(dept: "shoes", name: "Blue Boots", img_url:"/assets/shoes/blueboots.png")
 ClothingItem.create!(dept: "shoes", name: "Converse", img_url:"/assets/shoes/converseblack.png")

@@ -41,10 +41,12 @@ class Mlp.Routers.Application extends Backbone.Router
       @hats = @clothing_items.hats()
       hats_view = new Mlp.Views.Hats(collection: @hats)
       $('#hats-index').html(hats_view.render().el)
+      hats_view.positionHats()
       @shoes = @clothing_items.shoes()
       console.log(@shoes)
       shoes_view = new Mlp.Views.Shoes(collection: @shoes)
       $('#shoes-index').html(shoes_view.render().el)
+      shoes_view.positionShoes()
 
   exploring: (exploring_pony) ->
     console.log("exploring...")

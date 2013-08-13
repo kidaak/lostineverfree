@@ -1,5 +1,3 @@
-<hr>
-  </p>
-    <img src="<%= @hat.get('img_url') %>" alt="hat" width="250">
-  </p>
-</hr>
+</p>
+  <img src="<%= @hat.get('img_url') %>" alt="hat<%= @hat.get('id')%>" width="250">
+</p>

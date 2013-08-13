@@ -26,4 +26,4 @@ class Mlp.Views.CameoReservation extends Backbone.View
     console.log("removing cameoview")
     if this.current_view
       this.current_view.close() 
-      this.current_view = null
+      this.current_view.unbind()
