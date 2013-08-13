@@ -1,4 +1,5 @@
 class Mlp.Views.Everfree extends Backbone.View
+  
   everfreetemplate: JST['exploring/everfree']
   className: 'everfree-scene'
 
@@ -41,5 +42,6 @@ class Mlp.Views.Everfree extends Backbone.View
     console.log(@everfree)
     console.log(@everfreetemplate)
     $(@el).html(@everfreetemplate())
+    debugger
     @appendEverfreeScene(@collection.selected())
     this
