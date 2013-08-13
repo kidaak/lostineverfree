@@ -13,6 +13,8 @@
 .shelf {
   display: inline-block;
   background-image:url('shelf.png');
+  background-size: 125px 250px;
+  background-repeat: repeat-y;
   height: 100%;
   width: 125px;
   margin-right: 0px !important;
@@ -41,4 +43,16 @@
   left: 15%;
   top: 100px;
   width: 400px;
+}
+
+.clothing-sign {
+  position: relative;
+  top: 209px;
+  padding: 10px;
+  color: #c2a6d7;
+  text-align: center;
+  background-color: #9b5b97;
+  font-size: 30px;
+  height: 32px;
+  vertical-align:-40%;
 }
