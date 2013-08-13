@@ -11,7 +11,7 @@ class Mlp.Views.Pony extends Backbone.View
     @model.on('select', @selectPony, this)
 
   showPony: ->
-    Mlp.vent.trigger('click', @model)
+    Mlp.vent.trigger('pony:click', @model)
     this.remove()
     this.unbind()
 

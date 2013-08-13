@@ -8,7 +8,7 @@ class Mlp.Views.SettingsIndex extends Backbone.View
 
   initialize: ->
     @collection.randomSetting()
-    Mlp.vent.on('click', @rideIn, this)
+    Mlp.vent.on('pony:click', @rideIn, this)
     @collection.on('reset', @render, this)
     @collection.on('add', @appendSetting, this)
     @collection.on('change', @render, this)

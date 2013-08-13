@@ -4,7 +4,7 @@ class Mlp.Routers.Application extends Backbone.Router
     'ponies/:id': 'show'
 
   initialize: ->
-    Mlp.vent.on('click', @exploring, this)
+    Mlp.vent.on('pony:click', @exploring, this)
     @ponies = new Mlp.Collections.Ponies()
     @ponies.reset($('#container').data('ponies'))
     @settings = new Mlp.Collections.Settings()
