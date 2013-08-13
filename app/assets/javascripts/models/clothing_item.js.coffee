@@ -1,0 +1,1 @@
+class Mlp.Models.ClothingItem extends Backbone.Model

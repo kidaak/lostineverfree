@@ -4,6 +4,5 @@ class Mlp.Views.Shopping extends Backbone.View
 
     render: =>
       console.log("going shopping...")
-      console.log(this.model)
-      $(@el).html(@template(shopping_pony: this.model))
+      $(@el).html(@template())
       this

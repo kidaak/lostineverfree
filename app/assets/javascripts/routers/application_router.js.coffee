@@ -11,6 +11,8 @@ class Mlp.Routers.Application extends Backbone.Router
     @ponies.reset($('#container').data('ponies'))
     @settings = new Mlp.Collections.Settings()
     @settings.reset($('#container').data('settings'))
+    @clothing_items = new Mlp.Collections.ClothingItems
+    @clothing_items.reset($('#container').data('clothing_items'))
 
 
   index: ->
@@ -31,8 +33,10 @@ class Mlp.Routers.Application extends Backbone.Router
   shopping: (shopping_pony) ->
     console.log("shopping...")
     console.log(this)
-    shopping_view = new Mlp.Views.Shopping(model: shopping_pony)
-    $('#container').html(shopping_view.render().el) 
+    shopping_view = new Mlp.Views.Shopping()
+    $('#container').html(shopping_view.render().el)
+    fitting_room_view = new Mlp.Views.FittingRoom(model: shopping_pony)
+    $('#shopping_pony').html(fitting_room_view.render().el)
 
   exploring: (exploring_pony) ->
     console.log("exploring...")

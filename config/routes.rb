@@ -2,6 +2,7 @@ Mlp::Application.routes.draw do
   scope "api" do
     resources :ponies
     resources :settings
+    resources :clothing_items
   end
 
   root to: "main#index"

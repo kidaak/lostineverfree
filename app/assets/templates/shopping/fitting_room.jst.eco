@@ -1,0 +1,1 @@
+<img src="<%= @shopping_pony.get('img_url') %>" alt="shutterfly" width="180">
