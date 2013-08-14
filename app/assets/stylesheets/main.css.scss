@@ -38,11 +38,16 @@
   background-repeat: no-repeat;
 }
 
-.fitting-room-scene img {
-  position: relative;
-  left: 15%;
-  top: 100px;
+.fitting-room-scene img,
+{
+  position: absolute;
+  left: 36%;
+  top: 200px;
   width: 400px;
+}
+
+.fitting-room-scene img:last-child {
+  z-index: 2;
 }
 
 .clothing-sign {
@@ -59,6 +64,7 @@
 
 .clothing-list-item {
   position: absolute;
-  z-index: 3;
-  width: 300px;
+  z-index: 2;
+  width: 200px;
+  list-style-type: none;
 }

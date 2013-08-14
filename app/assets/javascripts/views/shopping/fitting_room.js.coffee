@@ -8,4 +8,5 @@ class Mlp.Views.FittingRoom extends Backbone.View
       $(@el).html(@template(shopping_pony: this.model))
       this
 
+
     

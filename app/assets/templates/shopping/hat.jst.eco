@@ -1,3 +1,0 @@
-</p>
-  <img src="<%= @hat.get('img_url') %>" alt="hat<%= @hat.get('id')%>" width="250">
-</p>

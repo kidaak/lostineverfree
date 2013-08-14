@@ -1,5 +1,5 @@
 class Mlp.Views.Hat extends Backbone.View
-  template: JST['shopping/hat']
+  template: JST['shopping/clothing']
   tagName: 'li'
   className: 'clothing-list-item'
 
@@ -11,5 +11,5 @@ class Mlp.Views.Hat extends Backbone.View
     console.log(@el)
     console.log(this)
     console.log(@model)
-    $(@el).html(@template(hat: @model))
+    $(@el).html(@template(clothing: @model))
     this

@@ -7,7 +7,6 @@ Setting.create!(in_everfree: true, cameo_reversed: true, cameo_position_left: "2
 Setting.create!(in_everfree: true, cameo_reversed: true, cameo_position_left: "30%", cameo_position_top: "90px", cameo_width: "290px", pony_reversed: false, pony_position_left: "63%", pony_position_top: "360px", pony_width: "200px", north: nil, south: 6, east: 12, west: 21, name: "Everfree Broken Bridge", img_url:"/assets/everfree_broken_bridge.png")
 Setting.create!(in_everfree: true, cameo_reversed: false, cameo_position_left: "55%", cameo_position_top: "220px", cameo_width: "380px", pony_reversed: true, pony_position_left: "33%", pony_position_top: "310px", pony_width: "250px", north: 5, south: nil, east: nil, west: nil, name: "Everfree Nice Walk", img_url:"/assets/everfree_nice_walk.png")
 Setting.create!(in_everfree: true, cameo_reversed: true, cameo_position_left: "33%", cameo_position_top: "380px", cameo_width: "280px", pony_reversed: false, pony_position_left: "50%", pony_position_top: "330px", pony_width: "150px", north: 20, south: 2, east: nil, west: nil, name: "Everfree Trees With Eyes", img_url:"/assets/everfree_trees_with_eyes.png")
-
 Setting.create!(in_everfree: true, cameo_reversed: false, cameo_position_left: "40%", cameo_position_top: "340px", cameo_width: "200px", pony_reversed: false, pony_position_left: "50%", pony_position_top: "360px", pony_width: "200px", north: 6, south: nil, east: nil, west: nil, name: "Everfree calm_water", img_url:"/assets/everfree_calm_water.png")
 Setting.create!(in_everfree: true, cameo_reversed: true, cameo_position_left: "40%", cameo_position_top: "660px", cameo_width: "230px", pony_reversed: false, pony_position_left: "60%", pony_position_top: "695px", pony_width: "150px", north: 13, south: 20, east: nil, west: nil, name: "Everfree Scary Dogs", img_url:"/assets/everfree_scary_dogs.jpg")
 Setting.create!(in_everfree: true, cameo_reversed: true, cameo_position_left: "50%", cameo_position_top: "510px", cameo_width: "50px", pony_reversed: false, pony_position_left: "65%", pony_position_top: "450px", pony_width: "150px", north: 19, south: nil, east: 20, west: 7, name: "Everfree Ruins", img_url:"/assets/everfree_ruins.png")
@@ -21,23 +20,19 @@ Setting.create!(in_everfree: true, cameo_reversed: true, cameo_position_left: "3
 Setting.create!(in_everfree: true, cameo_reversed: true, cameo_position_left: "33%", cameo_position_top: "360px", cameo_width: "310px", pony_reversed: false, pony_position_left: "59%", pony_position_top: "420px", pony_width: "180px", north: 11, south: 9, east: nil, west: 12, name: "Everfree Between Two Trees", img_url:"/assets/everfree_between_two_trees.png")
 Setting.create!(in_everfree: true, cameo_reversed: false, cameo_position_left: "60%", cameo_position_top: "400px", cameo_width: "220px", pony_reversed: true, pony_position_left: "40%", pony_position_top: "450px", pony_width: "120px", north: 17, south: 1, east: nil, west: 4, name: "Everfree Clearing By Night", img_url:"/assets/everfree_clearing_by_night.png")
 
-
-
-Pony.create!(name: "Queen Chrysalis", img_url: "http://fc06.deviantart.net/fs71/i/2012/316/d/7/queen_chrysalis_by_proenix-d5ksgw5.png")
-Pony.create!(name: "Twilight Sparkle", img_url: "http://www.hasbro.com/mylittlepony/images/carousel/twilight-sparkle-slide.png")
-Pony.create!(name: "Pinkie Pie", img_url: "http://www.hasbro.com/mylittlepony/images/carousel/pinkypie-slide.png")
-Pony.create!(name: "Fluttershy", img_url: "http://www.hasbro.com/mylittlepony/images/carousel/fluttershy-slide.png")
-Pony.create!(name: "Rarity", img_url: "http://www.hasbro.com/mylittlepony/images/carousel/rarity-slide.png")
-Pony.create!(name: "Applejack", img_url: "http://www.hasbro.com/mylittlepony/images/carousel/applejack-slide.png")
-Pony.create!(name: "Rainbow Dash", img_url: "http://www.hasbro.com/mylittlepony/images/carousel/rainbowdash-slide.png")
-Pony.create!(name: "Princess Celestia", img_url: "http://www.hasbro.com/mylittlepony/images/carousel/princesscelestia-slide.png")
-
-
 Setting.create!(in_everfree: false, name: "Canterlot Sunset", img_url:"http://fc05.deviantart.net/fs70/i/2011/109/9/1/canterlot_sunset___wallpaper_by_crappyunicorn-d3ece2n.jpg")
 Setting.create!(in_everfree: false, name: "Canterlot Midday", img_url:"http://images3.wikia.nocookie.net/__cb20120612084332/mlp/pl/images/6/66/Canterlot.png")
 Setting.create!(in_everfree: false, name: "Canterlot Winter", img_url:"http://images1.wikia.nocookie.net/__cb20111219011851/mlp/images/9/98/Canterlot_Entrance_S2E11.png")
 Setting.create!(in_everfree: false, name: "Canterlot Street By Night", img_url:"http://fc00.deviantart.net/fs71/i/2012/166/e/7/ye_olde_canterlot_by_spiritto-d53lwox.png")
 Setting.create!(in_everfree: false, name: "Canterlot Street By Day", img_url:"http://images3.wikia.nocookie.net/__cb20121212070759/mlp/images/e/e0/A_Canterlot_street_S2E9.png")
+
+Pony.create!(name: "Twilight Sparkle", img_url: "/assets/ponies/purplerain.png")
+Pony.create!(name: "Pinkie Pie", img_url: "/assets/ponies/pinkie.png")
+Pony.create!(name: "Fluttershy", img_url: "/assets/ponies/whiteuni.png")
+Pony.create!(name: "Applejack", img_url: "/assets/ponies/applejack.png")
+Pony.create!(name: "Rainbow Dash", img_url: "/assets/ponies/rainbow.png")
+Pony.create!(name: "Princess Celestia", img_url: "http://www.hasbro.com/mylittlepony/images/carousel/princesscelestia-slide.png")
+Pony.create!(name: "Queen Chrysalis", img_url: "http://fc06.deviantart.net/fs71/i/2012/316/d/7/queen_chrysalis_by_proenix-d5ksgw5.png")
 
 ClothingItem.create!(dept: "hats", name: "Blue Bow", img_url:"/assets/hats/bluebow.png")
 ClothingItem.create!(dept: "hats", name: "Cowboy", img_url:"/assets/hats/cowboyhat.png")
@@ -48,10 +43,10 @@ ClothingItem.create!(dept: "hats", name: "Umbrella", img_url:"/assets/hats/umbre
 ClothingItem.create!(dept: "hats", name: "Bow Seafoam", img_url:"/assets/hats/bowseafoam.png")
 
 ClothingItem.create!(dept: "shoes", name: "Blue Boots", img_url:"/assets/shoes/blueboots.png")
-ClothingItem.create!(dept: "shoes", name: "Converse", img_url:"/assets/shoes/converseblack.png")
 ClothingItem.create!(dept: "shoes", name: "Orange", img_url:"/assets/shoes/orangesshoes.png")
 ClothingItem.create!(dept: "shoes", name: "Purple", img_url:"/assets/shoes/purpleshoes.png")
 ClothingItem.create!(dept: "shoes", name: "Red", img_url:"/assets/shoes/red_shoes.png")
+ClothingItem.create!(dept: "shoes", name: "Converse", img_url:"/assets/shoes/converseblack.png")
 ClothingItem.create!(dept: "shoes", name: "Yellow Boots", img_url:"/assets/shoes/yellowboots.png")
 
 

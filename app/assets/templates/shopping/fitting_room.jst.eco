@@ -1,1 +1,3 @@
-<img src="<%= @shopping_pony.get('img_url') %>" alt="shutterfly" width="180">
+<div id="shopping-pony-target">
+  <img src="<%= @shopping_pony.get('img_url') %>" alt="shutterfly" width="180">
+</div>

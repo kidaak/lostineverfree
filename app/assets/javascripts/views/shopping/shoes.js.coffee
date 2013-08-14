@@ -24,7 +24,8 @@ class Mlp.Views.Shoes extends Backbone.View
 
   positionShoes: ->
     for shoe in @collection
-      adjustment = (shoe.get('id') - @collection[0].get('id'))*100
-      console.log(adjustment)
-      $("#shoe-#{shoe.get('id')}").css("top", "#{adjustment}px")
+      top = ((shoe.get('id') - @collection[0].get('id'))*80)-110
+      left = (21)
+      $("#shoe-#{shoe.get('id')}").css("top", "#{top}px")
+      $("#shoe-#{shoe.get('id')}").css("left", "#{left}%")
     this

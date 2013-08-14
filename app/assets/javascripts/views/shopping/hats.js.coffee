@@ -2,6 +2,7 @@ class Mlp.Views.Hats extends Backbone.View
   template: JST['shopping/hats_index']
   className: 'column span-4'
 
+
   initialize: ->
     this.on('change', @render, this)
     this.on('reset', @render, this)
@@ -21,5 +22,8 @@ class Mlp.Views.Hats extends Backbone.View
 
   positionHats: ->
     for hat in @collection
-      $("#hat-#{hat.get('id')}").css("top", "#{hat.get('id')*40}px")
+      top = ((hat.get('id'))*67)-40
+      left = 68
+      $("#hat-#{hat.get('id')}").css("top", "#{top}px")
+      $("#hat-#{hat.get('id')}").css("left", "#{left}%")
     this
