@@ -45,6 +45,7 @@ class Mlp.Routers.Application extends Backbone.Router
       $('#shoes-index').html(shoes_view.render().el)
       shoes_view.positionShoes()
       try_on_view = new Mlp.Views.TryOn(collection: @clothing_items)
+      $('#shopping-pony-target').append(try_on_view.render().el)
 
   exploring: (exploring_pony) ->
     console.log("exploring...")

@@ -35,7 +35,7 @@ class Mlp.Collections.ClothingItems extends Backbone.Collection
     Mlp.vent.trigger('changeHat:finished')
 
   changeShoes: (shoes_id) ->
-    console.log("ok now i'm really changing hats...")
+    console.log("ok now i'm really changing shoes...")
     console.log(this)
     console.log(shoes_id)
     previous_shoes = this.selected()
