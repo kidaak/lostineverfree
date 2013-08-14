@@ -23,7 +23,7 @@ class Mlp.Views.Shoes extends Backbone.View
   appendShoe: (shoe) ->
     console.log("appending shoe...")
     console.log(shoe)
-    shoe_view = new Mlp.Views.Shoe(model: shoe, id: "shoes-#{shoe.get('id')}")
+    shoe_view = new Mlp.Views.ClothingListItem(model: shoe, id: "shoes-#{shoe.get('id')}")
     @$('#shoes').append(shoe_view.render().el)
 
   positionShoes: ->

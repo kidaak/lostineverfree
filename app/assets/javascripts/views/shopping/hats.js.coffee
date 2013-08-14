@@ -21,7 +21,7 @@ class Mlp.Views.Hats extends Backbone.View
     this
 
   appendHat: (hat) ->
-    hat_view = new Mlp.Views.Hat(model: hat, id: "hats-#{hat.get('id')}")
+    hat_view = new Mlp.Views.ClothingListItem(model: hat, id: "hats-#{hat.get('id')}")
     @$('#hats').append(hat_view.render().el)
 
   positionHats: ->
