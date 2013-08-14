@@ -3,9 +3,6 @@ class Mlp.Views.Hat extends Backbone.View
   tagName: 'li'
   className: 'clothing-list-item'
 
-  initialize: ->
-    @model.on('change', @render, this)
-
   render: =>
     console.log("rendering hat...")
     console.log(@el)

@@ -11,6 +11,7 @@ class Mlp.Views.Shopping extends Backbone.View
     this
 
   clickedClothing: (event) ->
+    console.log("clothing clicked look out for updates...")
     event.preventDefault()
     clothing_dept = event.currentTarget.id.split("-")[0]
     clothing_id = event.currentTarget.id.split("-")[1]

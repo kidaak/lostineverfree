@@ -28,7 +28,8 @@ Setting.create!(in_everfree: false, name: "Canterlot Street By Day", img_url:"ht
 
 Pony.create!(name: "Twilight Sparkle", img_url: "/assets/ponies/purplerain.png")
 Pony.create!(name: "Pinkie Pie", img_url: "/assets/ponies/pinkie.png")
-Pony.create!(name: "Fluttershy", img_url: "/assets/ponies/whiteuni.png")
+Pony.create!(name: "Fluttershy", img_url: "/assets/ponies/butterflower.png")
+Pony.create!(name: "Rarity", img_url: "/assets/ponies/whiteuni.png")
 Pony.create!(name: "Applejack", img_url: "/assets/ponies/applejack.png")
 Pony.create!(name: "Rainbow Dash", img_url: "/assets/ponies/rainbow.png")
 Pony.create!(name: "Princess Celestia", img_url: "http://www.hasbro.com/mylittlepony/images/carousel/princesscelestia-slide.png")
