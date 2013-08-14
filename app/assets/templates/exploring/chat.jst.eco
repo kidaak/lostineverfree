@@ -1,0 +1,4 @@
+<form action="/messages" method="post">
+<textarea cols="20" rows="40" name="message"></textarea>
+<input type="submit" value="Chat"></input>
+</form>
