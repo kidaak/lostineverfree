@@ -5,6 +5,8 @@ Mlp::Application.routes.draw do
     resources :clothing_items
   end
 
+  post '/messages', to: 'messages#create'
+
   root to: "main#index"
   match '*path', to: 'main#index'
 

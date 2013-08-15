@@ -34,6 +34,9 @@ group :production do
   gem 'pg'  
 end
 
+#####FAYE#####
+gem 'nifty-generators'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
