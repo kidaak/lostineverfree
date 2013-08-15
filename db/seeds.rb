@@ -39,9 +39,9 @@ ClothingItem.create!(dept: "hats", name: "Blue Bow", thumb_url: "assets/NewThrea
 ClothingItem.create!(dept: "hats", name: "Cowboy", thumb_url: "assets/NewThreads/hats/cowboyhatthum.png", img_url:"/assets/hats/cowboyhat.png")
 ClothingItem.create!(dept: "hats", name: "Church", thumb_url: "assets/NewThreads/hats/finishedchurchhatthum.png", img_url:"/assets/hats/finishedchurchhat.png")
 ClothingItem.create!(dept: "hats", name: "Church Pink", thumb_url: "assets/NewThreads/hats/finishedchurchhatPKthum.png", img_url:"/assets/hats/finishedchurchhatPK.png")
-ClothingItem.create!(dept: "hats", name: "Best Hat", thumb_url: "assets/NewThreads/hats/bestHatthum.png", img_url:"/assets/images/NewThreads/hats/bestHat.png")
+ClothingItem.create!(dept: "hats", name: "Best Hat", thumb_url: "assets/NewThreads/hats/bestHatthum.png", img_url:"/assets/NewThreads/hats/bestHat.png")
 ClothingItem.create!(dept: "hats", name: "Umbrella", thumb_url: "assets/hats/umbrella.png", img_url:"/assets/hats/umbrella.png")
-ClothingItem.create!(dept: "hats", name: "Bow Seafoam", thumb_url: "assets/NewThreads/hats/seafoambowThum.png", img_url:"/assets/images/NewThreads/hats/seafoambow.png")
+ClothingItem.create!(dept: "hats", name: "Bow Seafoam", thumb_url: "assets/NewThreads/hats/seafoambowThum.png", img_url:"/assets/NewThreads/hats/seafoambow.png")
 
 ClothingItem.create!(dept: "shoes", name: "Blue Boots", thumb_url: "assets/NewThreads/shoes/bluebootsThum.png",             img_url:"/assets/shoes/blueboots.png")
 ClothingItem.create!(dept: "shoes", name: "Orange", thumb_url: "assets/NewThreads/shoes/Orangeshoethum.png",                img_url:"/assets/shoes/orangesshoes.png")
