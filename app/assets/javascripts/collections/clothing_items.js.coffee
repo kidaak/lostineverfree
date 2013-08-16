@@ -30,7 +30,7 @@ class Mlp.Collections.ClothingItems extends Backbone.Collection
         console.log(this.selected())
         clothing_item.deselect()
       console.log(clothing_item)
-    new_hat = this.models[hat_id]
+    new_hat = this.models[parseInt(hat_id) - 1]
     console.log(new_hat)
     new_hat.select()
     Mlp.vent.trigger('changeHat:finished')
@@ -46,7 +46,7 @@ class Mlp.Collections.ClothingItems extends Backbone.Collection
         console.log(this.selected())
         clothing_item.deselect()
         console.log(clothing_item)
-    new_shoes = this.models[shoes_id]
+    new_shoes = this.models[parseInt(shoes_id) - 1]
     console.log(new_shoes)
     new_shoes.select()
     Mlp.vent.trigger('changeShoes:finished')
