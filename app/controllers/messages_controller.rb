@@ -1,6 +1,7 @@
 class MainController < ApplicationController
   def index
-    @messages = Message.all
+    respond_to :html, :json
+    respond_with Message.all
   end
 
   def create

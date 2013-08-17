@@ -23,6 +23,8 @@ end
 
 gem 'jquery-rails'
 gem 'backbone-on-rails'
+gem 'faye'
+gem 'thin'
 
 group :development do
   gem "better_errors"

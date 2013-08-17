@@ -1,4 +1,6 @@
+<div id="messages"></div>
+
 <form action="/messages" method="post">
-<textarea cols="20" rows="40" name="content"></textarea>
-<input type="submit" value="Chat"></input>
+  <input type="text" id="message-content" name="content"></input>
+  <input type="submit" value="Chat"></input>
 </form>

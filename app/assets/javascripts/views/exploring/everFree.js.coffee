@@ -12,7 +12,6 @@ class Mlp.Views.Everfree extends Backbone.View
     @everfree = @collection.where in_everfree: true
     @everfree[0].select()
     Mlp.vent.on('everfree:navigated', @render, this)
-    Mlp.vent.on('cameo:rendered', @openChat, this)
 
   navigate: (event) ->
     event.preventDefault()
@@ -35,9 +34,6 @@ class Mlp.Views.Everfree extends Backbone.View
     view = new Mlp.Views.EverfreeScene(model: setting)
     @$('#everfree-scene').append(view.render().el)
 
-  openChat: ->
-    chatview = new Mlp.Views.Chat()
-    @$('#chat').html(chatview.render().el)
 
   render: ->
     console.log("rendering everfree")

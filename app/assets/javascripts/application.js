@@ -39,6 +39,14 @@
 
 Mlp.vent = _.extend({}, Backbone.Events);
 
+$(function() {
+  var faye = new Faye.Client("http://localhost:9292/faye");
+  faye.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
+  faye.subscribe('/messages', function (data) {
+    alert(data);
+  });
+});
+
 
 
 
