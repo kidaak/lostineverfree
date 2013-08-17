@@ -66,8 +66,9 @@ class Mlp.Routers.Application extends Backbone.Router
     $('#cameo').html(cameo_reservation_view.render().el)
 
   openChat: ->
-    chatview = new Mlp.Views.Chat()
-    $('#chat').html(chatview.render().el)
+    @messages.fetch success: =>
+      chatview = new Mlp.Views.Chat(collection: @messages)
+      $('#chat').html(chatview.render().el)
 
 
 
