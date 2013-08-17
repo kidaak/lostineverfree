@@ -6,6 +6,8 @@ class MessagesController < ApplicationController
   end
 
   def create
+    message = Message.create(params[:message])
+    WriteToChat.push_message(message.content)
     respond_with Message.create(params[:message])
   end
 
