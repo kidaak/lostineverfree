@@ -6,7 +6,12 @@ class Mlp.Views.Chat extends Backbone.View
 
   render: =>
     $(@el).html(@template())
+    @collection.each(@appendMessage)
     this
+
+  appendMessage: (message) =>
+    pony_view = new Mlp.Views.Message(model: message)
+    @$('#messages').append(pony_view.render().el)
 
   createMessage: (event) ->
     event.preventDefault()

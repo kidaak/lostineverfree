@@ -6,7 +6,7 @@ Mlp::Application.routes.draw do
     resources :messages
   end
 
-  # post '/messages', to: 'messages#create'
+  post '/messages' => 'messages#create'
 
   root to: "main#index"
   match '*path', to: 'main#index'
