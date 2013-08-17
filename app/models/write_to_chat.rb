@@ -1,5 +1,6 @@
 class WriteToChat
   def self.push_message(content)
+    debugger
     uri = URI.parse("http://localhost:3000/faye")
     data = {:content => content}
     message = {:channel => "/messages", :data => data}

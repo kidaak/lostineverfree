@@ -6,9 +6,7 @@ class MessagesController < ApplicationController
   end
 
   def create
-    debugger
-    message = Message.create(params)
-    WriteToChat.push_message(params["message"]["content"])
+    respond_with Message.create(params[:message])
   end
 
   def destroy
