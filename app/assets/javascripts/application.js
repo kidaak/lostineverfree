@@ -47,7 +47,7 @@ $(function() {
   faye.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
   faye.subscribe('/receive', function (data) {
     console.log(data);
-    $('#messages').append(data.content);
+    $('#messages').append("<p>" + data.content + "</p>");
   });
 });
 

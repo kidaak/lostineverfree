@@ -3,7 +3,6 @@ class Mlp.Views.Chat extends Backbone.View
 
   initialize: ->
     @collection.on('reset', @render, this)
-    @collection.on('add', @appendMessage, this)
     @collection.on('change', @render, this)
 
 
@@ -35,6 +34,7 @@ class Mlp.Views.Chat extends Backbone.View
       error: @handleError    
 
     @collection.create attributes, options
+    $('#new-message-content').val("")
 
 
   handleError: (pony, response) -> 
