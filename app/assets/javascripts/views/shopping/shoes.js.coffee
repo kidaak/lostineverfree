@@ -28,8 +28,8 @@ class Mlp.Views.Shoes extends Backbone.View
 
   positionShoes: ->
     for shoe in @shoes
-      top = ((shoe.get('id') - @shoes[0].get('id'))*80)-110
-      left = 17
+      top = ((shoe.get('id') - @shoes[0].get('id'))*80)+57
+      left = 27.5
       $("#shoes-#{shoe.get('id')}").css("top", "#{top}px")
       $("#shoes-#{shoe.get('id')}").css("left", "#{left}%")
     this
