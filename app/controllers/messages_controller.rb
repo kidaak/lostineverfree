@@ -8,6 +8,7 @@ class MessagesController < ApplicationController
   def create
     if params[:message]
       message = Message.create(params[:message])
+      Texter.send_with_twilio(params)
     else
       message = Message.create_from_text(params)
     end
