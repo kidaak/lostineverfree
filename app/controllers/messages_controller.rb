@@ -6,10 +6,15 @@ class MessagesController < ApplicationController
   end
 
   def create
-    message = Message.create(params[:message])
+    if params[:message]
+      message = Message.create(params[:message])
+    else
+      message = Message.create_from_text(params)
+    end
     WriteToChat.push_message(message.content)
     respond_with Message.create(params[:message])
   end
+
 
   def destroy
     respond_with Message.destroy(params[:id])

@@ -25,6 +25,9 @@ gem 'jquery-rails'
 gem 'backbone-on-rails'
 gem 'faye'
 gem 'thin'
+gem 'figaro'
+gem 'localtunnel'
+gem 'twilio-rb'
 
 group :development do
   gem "better_errors"
