@@ -9,3 +9,7 @@ window.Mlp =
 
 $(document).ready ->
   Mlp.initialize()
+  faye = new Faye.Client "http://localhost:9292/faye"
+  faye.setHeader 'Access-Control-Allow-Origin', 'http://localhost:3000'
+  faye.subscribe "/receive", (data) ->
+    $('#messages').append("<p>" + data.content + "</p>")

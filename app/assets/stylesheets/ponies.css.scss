@@ -11,12 +11,20 @@
   visibility: hidden;
 }
 
-.center-stage {
+#heroine img {
   position: absolute;
   z-index: 2;
   left: 50%;
   top: 340px;
   width: 120px;
+}
+
+.center-stage {
+  position: absolute;
+  z-index: 2;
+  left: 37%;
+  top: 400px;
+  width: 160px;
 }
 
 .center-stage img {

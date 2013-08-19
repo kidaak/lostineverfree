@@ -19,8 +19,8 @@ class Mlp.Views.Chat extends Backbone.View
 
   appendMessage: (message) =>
     console.log("appending message...")
-    pony_view = new Mlp.Views.Message(model: message)
-    @$('#messages').append(pony_view.render().el)
+    message_view = new Mlp.Views.Message(model: message)
+    @$('#messages').append(message_view.render().el)
 
 
   createMessage: (event) ->

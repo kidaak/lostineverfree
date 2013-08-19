@@ -1,6 +1,2 @@
-<p>
-  <img src="<%= @pony.get('img_url') %>" alt="shutterfly">
-</p>
-<h2 id="name-o" class="heroine-name">
-  <%= @pony.get('name') %>
-</h2>
+<img src="<%= @pony.get('img_url') %>" alt="shutterfly">
+

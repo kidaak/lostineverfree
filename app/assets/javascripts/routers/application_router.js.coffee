@@ -69,7 +69,7 @@ class Mlp.Routers.Application extends Backbone.Router
       everfree_view = new Mlp.Views.Everfree(collection: @settings)
       $('#background').html(everfree_view.render().el)
     heroine_view = new Mlp.Views.Heroine(model: exploring_pony)
-    $('#heroine').html(heroine_view.render().el)
+    $('#everfree').append(heroine_view.render().el)
     cameo_reservation_view = new Mlp.Views.CameoReservation(collection: @ponies)
     $('#cameo').html(cameo_reservation_view.render().el)
     console.log(exploring_pony.get('id'))
@@ -78,6 +78,8 @@ class Mlp.Routers.Application extends Backbone.Router
       success: =>
         console.log("fetched clothing items")
         console.log(@clothing_items)
+        outfit_view = new Mlp.Views.Outfit(collection: @clothing_items.models)
+        $('#heroine').append(outfit_view.render().el)
 
   openChat: ->
     @messages.fetch
