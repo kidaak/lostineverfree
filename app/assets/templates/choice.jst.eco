@@ -1,10 +1,12 @@
 <hr>
 <button class="column span4" id="go-shopping">GO SHOPPING</button>
 
-<div class="column span16" id="choice_pony">
-  </p>
-    <img src="<%= @choice_pony.get('img_url') %>" alt="shutterfly" width="600">
-  </p>
+<div class="column span16 choice-scene">
+  <p>
+    <div id="choice_pony">
+      <img src="<%= @choice_pony.get('img_url') %>" alt="shutterfly" width="600">
+    </div>
+  <p>
   <p>
     <% if @choice_pony.get('selected'): %>
       <span class="selected">SELECTED</span>

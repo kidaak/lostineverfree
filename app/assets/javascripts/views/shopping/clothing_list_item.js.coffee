@@ -5,8 +5,5 @@ class Mlp.Views.ClothingListItem extends Backbone.View
 
   render: =>
     console.log("rendering a clothing item...")
-    console.log(@el)
-    console.log(this)
-    console.log(@model)
     $(@el).html(@template(clothing: @model))
     this

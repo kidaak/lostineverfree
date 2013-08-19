@@ -18,6 +18,7 @@ def create
 end
 
 def update
+  Pony.find(params[:id]).update_outfit(params["clothing_items"]) if params["clothing_items"]
 	respond_with Pony.update(params[:id], params[:pony])
 end
 

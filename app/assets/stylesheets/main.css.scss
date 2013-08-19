@@ -50,6 +50,18 @@
   z-index: 2;
 }
 
+.choice-scene img,
+{
+  position: absolute;
+  left: 36%;
+  top: 200px;
+  width: 700px;
+}
+
+#outfit {
+  z-index: 2;
+}
+
 .clothing-sign {
   position: relative;
   top: 209px;
@@ -83,4 +95,9 @@
   width: 300px;
   border-style: solid;
   border-width: 3px;
+}
+
+#save-outfit {
+  position: absolute;
+  top: 650px;
 }

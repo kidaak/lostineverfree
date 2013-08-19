@@ -8,3 +8,4 @@ class Mlp.Models.Pony extends Backbone.Model
   deselect: ->
     @set(selected: false)
     @save()
+

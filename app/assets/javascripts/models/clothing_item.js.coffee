@@ -7,3 +7,4 @@ class Mlp.Models.ClothingItem extends Backbone.Model
   deselect: ->
     @set(selected: false)
     @save()
+

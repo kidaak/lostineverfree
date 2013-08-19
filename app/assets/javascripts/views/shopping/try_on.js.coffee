@@ -1,6 +1,9 @@
 class Mlp.Views.TryOn extends Backbone.View
   template: JST['shopping/try_on']
 
+  events:
+    'click #save-outfit': 'saveOutfit'
+
   initialize: ->
     Mlp.vent.on('changeHat:finished', @render, this)
     Mlp.vent.on('changeShoes:finished', @render, this)
@@ -21,8 +24,9 @@ class Mlp.Views.TryOn extends Backbone.View
 
   tryOn: =>
     console.log("Trying on a NEW outfit...")
-    console.log(@collection.selected_array())
     for clothing_item in @collection.selected_array()
-      console.log(clothing_item)
       $('#shopping-pony-outfit').append(@template(clothing: clothing_item))
     this
+
+  saveOutfit: =>
+    Mlp.vent.trigger('tryon:save', @collection.selected_array())

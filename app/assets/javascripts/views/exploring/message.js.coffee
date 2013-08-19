@@ -1,5 +1,6 @@
 class Mlp.Views.Message extends Backbone.View
     template: JST['exploring/message']
+    tagName: "p"
 
     initialize: ->
       console.log(this.model)

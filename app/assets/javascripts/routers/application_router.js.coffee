@@ -6,6 +6,7 @@ class Mlp.Routers.Application extends Backbone.Router
   initialize: ->
     Mlp.vent.on('cameo:rendered', @openChat, this)
     Mlp.vent.on('pony:click', @choices, this)
+    Mlp.vent.on('fitting_room:outfit_saved', @choices, this)
     Mlp.vent.on('choice:shopping', @shopping, this)
     Mlp.vent.on('choice:exploring', @exploring, this)
     @ponies = new Mlp.Collections.Ponies()
@@ -28,10 +29,17 @@ class Mlp.Routers.Application extends Backbone.Router
       view = new Mlp.Views.SettingsIndex(collection: @settings)
       $('#venue').html(view.render().el)
 
-  choices: (clicked_pony) ->
+  choices: (active_pony) ->
     console.log("Choices...")
-    choice_view = new Mlp.Views.Choice(model: clicked_pony)
+    choice_view = new Mlp.Views.Choice(model: active_pony)
     $('#container').html(choice_view.render().el)
+    @clothing_items.fetch
+      data: { pony_id: active_pony.get('id')}
+      success: =>
+        console.log("fetched clothing items")
+        console.log(@clothing_items)
+        outfit_view = new Mlp.Views.Outfit(collection: @clothing_items.models)
+        $('#choice_pony').append(outfit_view.render().el)
 
   shopping: (shopping_pony) ->
     console.log("shopping...")
@@ -64,11 +72,19 @@ class Mlp.Routers.Application extends Backbone.Router
     $('#heroine').html(heroine_view.render().el)
     cameo_reservation_view = new Mlp.Views.CameoReservation(collection: @ponies)
     $('#cameo').html(cameo_reservation_view.render().el)
+    console.log(exploring_pony.get('id'))
+    @clothing_items.fetch
+      data: { pony_id: exploring_pony.get('id')}
+      success: =>
+        console.log("fetched clothing items")
+        console.log(@clothing_items)
 
   openChat: ->
-    @messages.fetch success: =>
-      chatview = new Mlp.Views.Chat(collection: @messages)
-      $('#chat').html(chatview.render().el)
+    @messages.fetch
+      data: { relationship: "clothing_items" }
+      success: =>
+        chatview = new Mlp.Views.Chat(collection: @messages)
+        $('#chat').html(chatview.render().el)
 
 
 

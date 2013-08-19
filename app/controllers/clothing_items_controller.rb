@@ -6,7 +6,13 @@ def new
 end
 
 def index
-  respond_with ClothingItem.all 
+  if params["pony_id"]
+    @pony = Pony.find(params["pony_id"])
+    outfit = @pony.clothing_items
+    respond_with outfit
+  else
+    respond_with ClothingItem.all 
+  end
 end
 
 def show
