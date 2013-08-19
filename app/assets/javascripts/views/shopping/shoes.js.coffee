@@ -27,8 +27,10 @@ class Mlp.Views.Shoes extends Backbone.View
     @$('#shoes').append(shoe_view.render().el)
 
   positionShoes: ->
-    for shoe in @shoes
-      top = ((shoe.get('id') - @shoes[0].get('id'))*80)+57
+    console.log("shoes: #{@shoes}")
+    for shoe, i in @shoes
+      console.log(shoe)
+      top = (i*80)+57
       left = 27.5
       $("#shoes-#{shoe.get('id')}").css("top", "#{top}px")
       $("#shoes-#{shoe.get('id')}").css("left", "#{left}%")
@@ -38,5 +40,5 @@ class Mlp.Views.Shoes extends Backbone.View
     event.preventDefault()
     console.log("Changing Shoes yo...")
     shoe_id = event.currentTarget.id.split("-")[1]
-    console.log(shoe_id)
+    console.log("you clicked: #{shoe_id}")
     @collection.changeShoes(shoe_id)

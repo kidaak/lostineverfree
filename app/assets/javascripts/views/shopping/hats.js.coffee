@@ -25,8 +25,8 @@ class Mlp.Views.Hats extends Backbone.View
     @$('#hats').append(hat_view.render().el)
 
   positionHats: ->
-    for hat in @hats
-      top = ((hat.get('id'))*67)-30
+    for hat, i in @hats
+      top = (i*67)+57
       left = 67
       $("#hats-#{hat.get('id')}").css("top", "#{top}px")
       $("#hats-#{hat.get('id')}").css("left", "#{left}%")
@@ -36,5 +36,5 @@ class Mlp.Views.Hats extends Backbone.View
     event.preventDefault()
     console.log("Changing Hats yo...")
     hat_id = event.currentTarget.id.split("-")[1]
-    console.log(hat_id)
+    console.log("you clicked: #{hat_id}")
     @collection.changeHat(hat_id)
