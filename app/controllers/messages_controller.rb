@@ -8,11 +8,14 @@ class MessagesController < ApplicationController
   def create
     if params[:message]
       message = Message.create(params[:message])
-      Texter.send_with_twilio(params)
+      message.heroine = params[:heroine]
+      message.outgoing = true
+      message.save()
+      Texter.send_with_twilio(message.heroine, message.content)
     else
       message = Message.create_from_text(params)
     end
-    WriteToChat.push_message(message.content)
+    WriteToChat.push_message(message.content, message.heroine, message.outgoing)
     respond_with Message.create(params[:message])
   end
 

@@ -17,6 +17,21 @@ class Mlp.Routers.Application extends Backbone.Router
     @clothing_items.reset($('#container').data('clothing_items'))
     @messages = new Mlp.Collections.Messages()
     @messages.reset($('#container').data('messages'))
+    faye = new Faye.Client "http://localhost:9292/faye"
+    faye.setHeader 'Access-Control-Allow-Origin', 'http://localhost:3000'
+    console.log("before: #{@messages}")
+    faye.subscribe "/receive", (data) =>
+      console.log("inside: #{@messages}")
+      console.log("the data is: #{data}")
+      @messages.add content: data.content, heroine: data.heroine, outgoing: data.outgoing
+      height = 0
+      $('#messages div').each (i, message) ->
+        console.log(message)
+        console.log("scroll to #{this}")
+        console.log("scroll to #{@$}")
+        height += parseInt($(this).height())
+        console.log("the final height is #{height}")
+      $('#messages').animate({scrollTop:height}, 500,'swing');
 
 
   index: ->
@@ -83,7 +98,6 @@ class Mlp.Routers.Application extends Backbone.Router
 
   openChat: ->
     @messages.fetch
-      data: { relationship: "clothing_items" }
       success: =>
         chatview = new Mlp.Views.Chat(collection: @messages)
         $('#chat').html(chatview.render().el)

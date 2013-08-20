@@ -6,6 +6,6 @@ class Mlp.Views.Message extends Backbone.View
       @model.on('change', @render, this)
 
     render: =>
-      console.log("rendering message...#{this.model}")
+      console.log("rendering message...#{@model}")
       $(@el).html(@template(message: @model))
       this
