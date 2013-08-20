@@ -1,2 +1,6 @@
-<%= @message.get('heroine') %>:
+<% if @message.get('outgoing'): %>
+  <%= @message.get('heroine') %>:
+<% else: %>
+  <%= @cameo_name %>:
+<% end %>
 <%= @message.get('content') %>
