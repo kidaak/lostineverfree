@@ -5,6 +5,7 @@ class Mlp.Views.Chat extends Backbone.View
     @collection.on('reset', @render, this)
     @collection.on('add', @appendMessage, this)
     @collection.on('change', @render, this)
+    @chat = @collection.filter (x) -> x.get('heroine') == $('#heroine-name').html()
 
 
   events:
@@ -14,7 +15,6 @@ class Mlp.Views.Chat extends Backbone.View
   render: ->
     console.log("rendering chat..")
     $(@el).html(@template())
-    @chat = @collection.filter (x) -> x.get('heroine') == $('#heroine-name').html()
     console.log("the chat is #{@chat}")
     for message in @chat
       @appendMessage(message)
