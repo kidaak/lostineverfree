@@ -30,4 +30,12 @@ namespace :deploy do
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
   end
+
+  task :symlink_config, :roles => :app do 
+    run "ln -nfs #{shared_path}/application.yml #{current_release}/config/application.yml"
+    run "ln -nfs #{shared_path}/production.sqlite3 #{current_release}/db/production.sqlite3"
+  end
 end
+
+# Load assets here and create symlinks.
+after 'deploy:update_code','deploy:symlink_config'
