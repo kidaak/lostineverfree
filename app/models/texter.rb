@@ -4,8 +4,5 @@ class Texter
     Twilio::SMS.create :to => "+12069725447", 
     :from => ENV["TWILIO_NUMBER"],
     :body => body
-    Twilio::SMS.create :to => "+15035377883", 
-    :from => ENV["TWILIO_NUMBER"],
-    :body => body
   end
 end
