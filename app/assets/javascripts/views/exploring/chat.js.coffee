@@ -2,10 +2,10 @@ class Mlp.Views.Chat extends Backbone.View
   template: JST['exploring/chat']
 
   initialize: ->
+    Mlp.vent.on('everfree:navigated', @clearChat, this)
     @collection.on('reset', @render, this)
     @collection.on('add', @appendMessage, this)
     @collection.on('change', @render, this)
-    @chat = @collection.filter (x) -> x.get('heroine') == $('#heroine-name').html()
 
 
   events:
@@ -13,6 +13,7 @@ class Mlp.Views.Chat extends Backbone.View
 
 
   render: ->
+    @chat = @collection.filter (x) -> x.get('heroine') == $('#heroine-name').html()
     console.log("rendering chat..")
     $(@el).html(@template())
     console.log("the chat is #{@chat}")
@@ -47,4 +48,12 @@ class Mlp.Views.Chat extends Backbone.View
       errors = $.parseJSON(response.responseText).errors
       for attribute, messages of errors
         alert "#{attribute} #{message}" for message in messages
+
+  clearChat: =>
+    console.log("Clear the chat...")
+    console.log(@chat)
+    @finished_chat = @collection.filter (x) -> x.get('heroine') == $('#heroine-name').html()
+    debugger
+    for message in @finished_chat
+      message.trash()
 
