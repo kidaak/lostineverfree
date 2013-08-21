@@ -10,10 +10,9 @@ class MessagesController < ApplicationController
       message = Message.new(params[:message])
       message.heroine = params[:heroine]
       message.outgoing = true
-      debugger
-      message.save()
+      message.save()      
+      Texter.send_with_twilio(message.heroine, message.content)
     else
-      debugger
       message = Message.create_from_text(params)
     end
     WriteToChat.push_message(message.content, message.heroine, message.outgoing)

@@ -53,7 +53,6 @@ class Mlp.Views.Chat extends Backbone.View
     console.log("Clear the chat...")
     console.log(@chat)
     @finished_chat = @collection.filter (x) -> x.get('heroine') == $('#heroine-name').html()
-    debugger
     for message in @finished_chat
       message.trash()
 

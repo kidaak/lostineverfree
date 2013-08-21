@@ -23,7 +23,8 @@ class Mlp.Routers.Application extends Backbone.Router
     faye.subscribe "/receive", (data) =>
       console.log("inside: #{@messages}")
       console.log("the data is: #{data}")
-      @messages.add content: data.content, heroine: data.heroine, outgoing: data.outgoing
+      if !data.outgoing
+        @messages.add content: data.content, heroine: data.heroine, outgoing: data.outgoing
       height = 0
       $('#messages div').each (i, message) ->
         console.log(message)
