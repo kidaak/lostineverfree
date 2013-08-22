@@ -10,7 +10,7 @@ class Mlp.Views.Everfree extends Backbone.View
     console.log("initializing everfree")
     @collection.randomReset()
     @everfree = @collection.where in_everfree: true
-    @everfree[0].select()
+    @everfree[1].select()
     debugger
     Mlp.vent.on('everfree:navigated', @render, this)
 
@@ -42,4 +42,5 @@ class Mlp.Views.Everfree extends Backbone.View
     console.log("rendering everfree")
     $(@el).html(@everfreetemplate())
     @appendEverfreeScene(@collection.selected())
+    Mlp.vent.trigger('everfree:rendered', @collection.selected())
     this

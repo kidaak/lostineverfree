@@ -2,8 +2,8 @@ class Mlp.Views.Action extends Backbone.View
     template: JST['action']
 
     initialize: ->
-      Mlp.vent.on('everfree:navigated', @positionHeroine, this)
-      Mlp.vent.on('everfree:navigated', @positionCameo, this)
+      Mlp.vent.on('everfree:rendered', @positionHeroine, this)
+      Mlp.vent.on('everfree:rendered', @positionCameo, this)
 
     render: =>
       $(@el).html(@template())
