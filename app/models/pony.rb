@@ -11,4 +11,10 @@ class Pony < ActiveRecord::Base
       PonyClothingItem.create(pony_id: self.id, clothing_item_id: clothing_item["id"])
     end
   end
+
+  def self.names
+    self.all.collect do |pony|
+      pony.name
+    end
+  end
 end

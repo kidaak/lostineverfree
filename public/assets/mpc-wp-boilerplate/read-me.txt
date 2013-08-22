@@ -1,4 +1,0 @@
-Settings files located in:
-
-- mpc-wp-boilerplate/custom/less/variables.less
-- mpcth-settings.php
