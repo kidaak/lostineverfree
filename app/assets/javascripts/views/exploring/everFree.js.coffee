@@ -11,7 +11,6 @@ class Mlp.Views.Everfree extends Backbone.View
     @collection.randomReset()
     @everfree = @collection.where in_everfree: true
     @everfree[1].select()
-    debugger
     Mlp.vent.on('everfree:navigated', @render, this)
 
   navigate: (event) ->
@@ -33,7 +32,6 @@ class Mlp.Views.Everfree extends Backbone.View
     console.log("appending a new setting...")
     console.log(setting)
     view = new Mlp.Views.EverfreeScene(model: setting)
-    debugger
     @$('#everfree-scene').append(view.render().el)
     @hideButtons(setting)
 
