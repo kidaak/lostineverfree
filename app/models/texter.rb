@@ -1,9 +1,11 @@
 class Texter
   def self.send_with_twilio(speaker, content)
     body = speaker + ": " + content
-    Twilio::SMS.create :to => ENV["ME"], 
-    :from => ENV["TWILIO_NUMBER"],
-    :body => body
+    ENV["Family"].each do |family_member|
+      Twilio::SMS.create :to => ENV[family_member], 
+      :from => ENV["TWILIO_NUMBER"],
+      :body => body
+    end
   end
 
   def self.send_better_luck(sender)
