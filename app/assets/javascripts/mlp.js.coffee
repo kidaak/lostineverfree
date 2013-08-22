@@ -1,3 +1,5 @@
+console.error()
+
 window.Mlp =
   Models: {}
   Collections: {}

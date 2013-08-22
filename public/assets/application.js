@@ -12981,6 +12981,8 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
 
 }).call(this);
 (function() {
+  console.error();
+
   window.Mlp = {
     Models: {},
     Collections: {},
@@ -13156,11 +13158,11 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
       (function() {
         __out.push('<p>\n  <img src="');
       
-        __out.push(__sanitize(this.cameo.get('img_url')));
+        __out.push(__sanitize(this.cameo_pony.get('img_url')));
       
         __out.push('" alt="cameo_pony">\n</p>\n<div class="hidden" id="cameo-name">\n  ');
       
-        __out.push(__sanitize(this.cameo.get('name')));
+        __out.push(__sanitize(this.cameo_pony.get('name')));
       
         __out.push('\n</div>\n');
       
@@ -14798,8 +14800,9 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
       console.log("rendering cameo...");
       console.log(this.model);
       console.log($(this.el));
+      debugger;
       $(this.el).html(this.template({
-        cameo: this.model
+        cameo_pony: this.model
       }));
       Mlp.vent.trigger('cameo:rendered');
       return this;
@@ -14854,10 +14857,12 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
       console.log("appending cameo...");
       console.log(pony_id);
       console.log(collection);
+      debugger;
       if (pony_id) {
         this.cameo = collection.where({
           id: pony_id
         });
+        debugger;
         console.log("the cameo i'm appending is " + this.cameo[0]);
         cameoview = new Mlp.Views.Cameo({
           model: this.cameo[0]
@@ -15021,6 +15026,7 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
         in_everfree: true
       });
       this.everfree[0].select();
+      debugger;
       return Mlp.vent.on('everfree:navigated', this.render, this);
     };
 
@@ -16097,35 +16103,6 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

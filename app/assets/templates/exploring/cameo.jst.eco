@@ -1,6 +1,6 @@
 <p>
-  <img src="<%= @cameo.get('img_url') %>" alt="cameo_pony">
+  <img src="<%= @cameo_pony.get('img_url') %>" alt="cameo_pony">
 </p>
 <div class="hidden" id="cameo-name">
-  <%= @cameo.get('name') %>
+  <%= @cameo_pony.get('name') %>
 </div>

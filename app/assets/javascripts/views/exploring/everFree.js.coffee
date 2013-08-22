@@ -11,6 +11,7 @@ class Mlp.Views.Everfree extends Backbone.View
     @collection.randomReset()
     @everfree = @collection.where in_everfree: true
     @everfree[0].select()
+    debugger
     Mlp.vent.on('everfree:navigated', @render, this)
 
   navigate: (event) ->
