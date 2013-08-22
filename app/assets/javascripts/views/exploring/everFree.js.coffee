@@ -23,8 +23,8 @@ class Mlp.Views.Everfree extends Backbone.View
   
   hideButtons: (everfreeScene) ->
     console.log("hiding buttons...")
-    debugger
-    $('#nav-buttons').children().each ->
+    nav_buttons = @$el.find('#nav-buttons')
+    nav_buttons.children().each ->
       id = $(this).attr("id")
       console.log(id)
       $(this).addClass('hidden') if not everfreeScene.get("#{id}")
