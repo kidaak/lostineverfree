@@ -14,8 +14,8 @@
 //= require jquery_ujs
 //= require underscore
 //= require backbone
-//= require faye
 //= require mlp
+//= require faye
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections
