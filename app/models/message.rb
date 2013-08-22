@@ -8,7 +8,7 @@ class Message < ActiveRecord::Base
     content = body_array[1]
     chat = Message.where :heroine => heroine
     if body_array.count < 2 || !Pony.names.include?(heroine)
-      Texter.correction
+      Texter.correction(params["From"])
       message.assign_values("typo", body_array[1], false)
       message
     elsif chat.last && chat.last.outgoing
