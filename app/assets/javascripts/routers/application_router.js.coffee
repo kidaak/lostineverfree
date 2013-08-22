@@ -17,8 +17,8 @@ class Mlp.Routers.Application extends Backbone.Router
     @clothing_items.reset($('#container').data('clothing_items'))
     @messages = new Mlp.Collections.Messages()
     @messages.reset($('#container').data('messages'))
-    faye = new Faye.Client "http://198.211.98.18:9292/faye"
-    faye.setHeader 'Access-Control-Allow-Origin', 'http://198.211.98.18'
+    faye = new Faye.Client "http://localhost:9292/faye"
+    faye.setHeader 'Access-Control-Allow-Origin', 'http://localhost:3000'
     console.log("before: #{@messages}")
     faye.subscribe "/receive", (data) =>
       console.log("inside: #{@messages}")

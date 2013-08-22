@@ -20,9 +20,11 @@
 //= require_tree ./collections
 //= require_tree ./views
 //= require_tree ./routers
+//= require collections/clothing_items
 //= require collections/ponies
 //= require collections/settings
 //= require collections/messages
+//= require models/clothing_item
 //= require models/pony
 //= require models/setting
 //= require models/message
@@ -33,10 +35,21 @@
 //= require views/exploring/everfree_scene
 //= require views/exploring/heroine
 //= require views/exploring/chat
+//= require views/exploring/message
 //= require views/ponies/ponies_index
 //= require views/ponies/pony
+//= require views/shopping/clothing_item_on
+//= require views/shopping/clothing_list_item
+//= require views/shopping/fitting_room
+//= require views/shopping/hats
+//= require views/shopping/shoes
+//= require views/shopping/shopping
+//= require views/shopping/try_on
+//= require views/choice
+//= require views/outfit
 //= require views/action
 //= require views/main
+//= require faye
 
 
 
