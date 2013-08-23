@@ -1,5 +1,5 @@
 class Texter
-  @@family = ["ME", "DELL", "LIA"]
+  @@family = ["ME", "LIA", "NINA"]
   def self.send_with_twilio(speaker, content)
     body = speaker + ": " + content
     @@family.each do |family_member|
