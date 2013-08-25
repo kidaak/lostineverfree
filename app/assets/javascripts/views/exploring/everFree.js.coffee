@@ -46,3 +46,4 @@ class Mlp.Views.Everfree extends Backbone.View
     @appendEverfreeScene(@collection.selected())
     Mlp.vent.trigger('everfree:rendered', @collection.selected())
     this
+
