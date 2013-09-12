@@ -35,16 +35,6 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/application.yml #{current_release}/config/application.yml"
     run "ln -nfs #{shared_path}/production.sqlite3 #{current_release}/db/production.sqlite3"
   end
-
-  namespace :assets do
-    task :precompile, :roles => :web, :except => { :no_release => true } do
-      from = source.next_revision(current_revision)
-      if releases.length <= 1 || capture("cd #{latest_release} && #{source.local.log(from)} vendor/assets/ app/assets/ | wc -l").to_i > 0
-        run %Q{cd #{latest_release} && #{rake} RAILS_ENV=#{rails_env} #{asset_env} assets:precompile}
-      else
-        logger.info "Skipping asset pre-compilation because there were no asset changes"
-      end
-  end
 end
 
 # Load assets here and create symlinks.
