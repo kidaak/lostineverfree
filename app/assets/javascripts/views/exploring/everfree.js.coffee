@@ -9,7 +9,7 @@ class Mlp.Views.Everfree extends Backbone.View
 
   initialize: ->
     console.log("initializing everfree")
-    @collection.randomReset().toLowerCase()
+    @collection.randomReset()
     @everfree = @collection.where in_everfree: true
     @everfree[1].select()
     Mlp.vent.on('everfree:navigated', @render, this)
@@ -18,7 +18,7 @@ class Mlp.Views.Everfree extends Backbone.View
   navigate: (event) ->
     event.preventDefault()
     console.log("navigating")
-    direction = event.currentTarget.innerHTML
+    direction = event.currentTarget.innerHTML.toLowerCase()
     new_scene = @collection.navigate(@collection.selected(), direction)
     if $('#chat')[0].innerHTML == ""
       Mlp.vent.trigger('everfree:navigated', new_scene)
