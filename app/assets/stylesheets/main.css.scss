@@ -20,6 +20,16 @@
   margin-right: 0px !important;
 }
 
+.skirts {
+  z-index:2;
+  position: absolute;
+  left: 170px;
+  background-image:url('clothesline.png');
+  height: 60px;
+  width: 300px;
+  background-size: contain;
+}
+
 #fitting-room {
   height: 500px;
   position: relative;

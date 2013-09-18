@@ -50,5 +50,14 @@ ClothingItem.create!(dept: "shoes", name: "Red", thumb_url: "assets/NewThreads/s
 ClothingItem.create!(dept: "shoes", name: "Converse", thumb_url: "assets/NewThreads/shoes/converseblackthum.png",           img_url:"/assets/shoes/converseblack.png")
 ClothingItem.create!(dept: "shoes", name: "Yellow Boots", thumb_url: "assets/NewThreads/shoes/yellowbootsThum.png",         img_url:"/assets/shoes/yellowboots.png")
 
+ClothingItem.create!(dept: "skirts", name: "Skirt Blue", thumb_url: "assets/NewThreads/skirts/skirtbluethum.png",         img_url:"/assets/NewThreads/skirts/skirtblue.png")
+ClothingItem.create!(dept: "skirts", name: "Skirt Green", thumb_url: "assets/NewThreads/skirts/skirtgreenthum.png",         img_url:"/assets/NewThreads/skirts/skirtgreen.png")
+ClothingItem.create!(dept: "skirts", name: "Skirt Blue", thumb_url: "assets/NewThreads/skirts/skirtpinkthum.png",         img_url:"/assets/NewThreads/skirts/skirtpink.png")
+
+ClothingItem.create!(dept: "eyewear", name: "Glasses Orange", thumb_url: "assets/NewThreads/eyewear/glassesorangethum.png",         img_url:"/assets/NewThreads/eyewear/glassesorange.png")
+ClothingItem.create!(dept: "eyewear", name: "Glasses White", thumb_url: "assets/NewThreads/eyewear/glasseswhitethum.png",         img_url:"/assets/NewThreads/eyewear/glasseswhite.png")
+
+
+
 
 

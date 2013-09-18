@@ -9,6 +9,9 @@ class Mlp.Collections.ClothingItems extends Backbone.Collection
   hats: =>
     this.where dept: "hats"
 
+  skirts: =>
+    this.where dept: "skirts"
+
   agnostic_filter: (dept_name) =>
     this.where dept: dept_name
 
@@ -21,13 +24,10 @@ class Mlp.Collections.ClothingItems extends Backbone.Collection
 
   changeHat: (hat_id) ->
     console.log("ok now i'm really changing hats...hat: #{hat_id}")
-    console.log(this)
-    console.log(hat_id)
     previous_clothes = this.selected_array()
     for clothing_item in previous_clothes
       if clothing_item.get('dept') == "hats"
         console.log("I found a hat!")
-        console.log(this.selected())
         clothing_item.deselect()
       console.log(clothing_item)
     new_hat = (this.models.filter (x) -> x.get('id') == parseInt(hat_id))[0]
@@ -39,16 +39,26 @@ class Mlp.Collections.ClothingItems extends Backbone.Collection
 
   changeShoes: (shoes_id) ->
     console.log("ok now i'm really changing shoes...")
-    console.log(this)
-    console.log(shoes_id)
     previous_clothes = this.selected_array()
     for clothing_item in previous_clothes
       if clothing_item.get('dept') == "shoes"
         console.log("I found shoes!")
-        console.log(this.selected())
         clothing_item.deselect()
         console.log(clothing_item)
     new_shoes = (this.models.filter (x) -> x.get('id') == parseInt(shoes_id))[0]
     console.log("the new shoes are: #{new_shoes.get('id')}")
     new_shoes.select()
     Mlp.vent.trigger('changeShoes:finished')
+
+  changeSkirts: (skirt_id) ->
+    console.log("ok now i'm really changing skirt...")
+    previous_clothes = this.selected_array()
+    for clothing_item in previous_clothes
+      if clothing_item.get('dept') == "skirt"
+        console.log("I found a skirt!")
+        clothing_item.deselect()
+        console.log(clothing_item)
+    new_skirt = (this.models.filter (x) -> x.get('id') == parseInt(skirt_id))[0]
+    console.log("the new skirt are: #{new_skirt.get('id')}")
+    new_skirt.select()
+    Mlp.vent.trigger('changeSkirts:finished')
