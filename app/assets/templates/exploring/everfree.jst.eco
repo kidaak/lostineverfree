@@ -1,0 +1,9 @@
+<div id="nav-buttons">
+  <div class='navigate big-button' id="north">NORTH</div>
+  <div class='navigate big-button' id="south">SOUTH</div>
+  <div class='navigate big-button' id="east">EAST</div>
+  <div class='navigate big-button' id="west">WEST</div>
+  <div id="escape">ESCAPE FROM EVERFREE</div>
+</div>
+<div id="everfree-scene"></div>
+<div id="chat"></div>
