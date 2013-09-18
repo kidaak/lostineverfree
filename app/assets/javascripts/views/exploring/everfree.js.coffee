@@ -9,7 +9,7 @@ class Mlp.Views.Everfree extends Backbone.View
 
   initialize: ->
     console.log("initializing everfree")
-    @collection.randomReset()
+    @collection.randomReset().toLowerCase()
     @everfree = @collection.where in_everfree: true
     @everfree[1].select()
     Mlp.vent.on('everfree:navigated', @render, this)
