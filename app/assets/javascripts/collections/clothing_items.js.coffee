@@ -54,7 +54,7 @@ class Mlp.Collections.ClothingItems extends Backbone.Collection
     console.log("ok now i'm really changing skirt...")
     previous_clothes = this.selected_array()
     for clothing_item in previous_clothes
-      if clothing_item.get('dept') == "skirt"
+      if clothing_item.get('dept') == "skirts"
         console.log("I found a skirt!")
         clothing_item.deselect()
         console.log(clothing_item)
