@@ -33,6 +33,25 @@ group :development do
   gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
 end
 
+group :test, :development do
+  gem 'rspec-rails', '2.14.0'
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'capybara-accessible'
+  gem 'launchy'
+  gem 'sqlite3'
+  gem 'database_cleaner'
+  gem 'pry-debugger'
+  gem 'letter_opener'
+  gem 'timecop'
+  gem 'foreman'
+  gem 'fakefs', :require => 'fakefs/safe'
+  gem 'jasmine'
+end
+
 
 #####FAYE#####
 gem 'nifty-generators'
