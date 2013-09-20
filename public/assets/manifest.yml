@@ -141,6 +141,8 @@ NewThreads/templates/templates_ponies_poses.png: NewThreads/templates/templates_
 NewThreads/templates/templates_ponies_poses/index.png: NewThreads/templates/templates_ponies_poses.png
 bridge_to_village.png: bridge_to_village.png
 bridge_to_village/index.png: bridge_to_village.png
+canterlot_sunset.jpg: canterlot_sunset.jpg
+canterlot_sunset/index.jpg: canterlot_sunset.jpg
 clothesline.png: clothesline.png
 clothesline/index.png: clothesline.png
 dressing_room.png: dressing_room.png

@@ -49,7 +49,7 @@ group :test, :development do
   gem 'timecop'
   gem 'foreman'
   gem 'fakefs', :require => 'fakefs/safe'
-  gem 'jasmine'
+  gem 'jasminerice', :git => 'https://github.com/bradphelan/jasminerice.git'
 end
 
 

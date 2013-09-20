@@ -14378,6 +14378,10 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
       return _ref;
     }
 
+    Pony.prototype.collection = Mlp.Collections.Ponies;
+
+    Pony.prototype.url = '/api/ponies';
+
     Pony.prototype.select = function() {
       this.set({
         selected: true
