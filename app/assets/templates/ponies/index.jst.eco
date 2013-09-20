@@ -6,7 +6,7 @@
       <label>Image url:</label>
       <input type="text" name="img_url" id="new_pony_img_url">
       <div class="wpb_wrapper">
-        <input type="submit" class="mpcth-sc-button mpcth-sc-button-size-normal" value="Add">
+        <input type="submit" class="mpcth-sc-button mpcth-sc-button-size-normal" value="Add" id="add-pony">
       </div>
     </form>
   </fieldset>

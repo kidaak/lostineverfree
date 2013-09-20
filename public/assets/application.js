@@ -13095,7 +13095,7 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
     }
     (function() {
       (function() {
-        __out.push('<hr>\n<button class="column span4" id="go-shopping">GO SHOPPING</button>\n\n<div class="column span16 choice-scene">\n  <p>\n    <div id="choice_pony">\n      <img src="');
+        __out.push('<hr>\n<div class="column span4 big-button" id="go-shopping">GO SHOPPING</div>\n\n<div class="column span16 choice-scene">\n  <p>\n    <div id="choice_pony">\n      <img src="');
       
         __out.push(__sanitize(this.choice_pony.get('img_url')));
       
@@ -13109,7 +13109,7 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
       
         __out.push(__sanitize(this.choice_pony.get('name')));
       
-        __out.push('\n  </p>\n</div>\n\n<button class="column span4" id="go-exploring">GO EXPLORING</button>\n</hr>\n');
+        __out.push('\n  </p>\n</div>\n\n<div class="column span4 big-button" id="go-exploring">GO EXPLORING</div>\n</hr>\n');
       
       }).call(this);
       
@@ -13317,7 +13317,7 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
     }
     (function() {
       (function() {
-        __out.push('<div id="nav-buttons">\n  <button class=\'navigate\' id="north">north</button>\n  <button class=\'navigate\' id="south">south</button>\n  <button class=\'navigate\' id="east">east</button>\n  <button class=\'navigate\' id="west">west</button>\n  <button id="escape">ESCAPE FROM EVERFREE</button>\n</div>\n<div id="everfree-scene"></div>\n<div id="chat"></div>\n');
+        __out.push('<div id="nav-buttons">\n  <div class=\'navigate big-button\' id="north">NORTH</div>\n  <div class=\'navigate big-button\' id="south">SOUTH</div>\n  <div class=\'navigate big-button\' id="east">EAST</div>\n  <div class=\'navigate big-button\' id="west">WEST</div>\n  <div class=\'big-button\' id="escape">ESCAPE FROM EVERFREE</div>\n</div>\n<div id="everfree-scene"></div>\n<div id="chat"></div> \n');
       
       }).call(this);
       
@@ -13701,7 +13701,7 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
     }
     (function() {
       (function() {
-        __out.push('  <fieldset>\n    <legend>New Pony</legend>\n    <form id="new_pony" class="inline">\n      <label>Pony name:</label>\n      <input type="text" name="name" id="new_pony_name">\n      <label>Image url:</label>\n      <input type="text" name="img_url" id="new_pony_img_url">\n      <div class="wpb_wrapper">\n        <input type="submit" class="mpcth-sc-button mpcth-sc-button-size-normal" value="Add">\n      </div>\n    </form>\n  </fieldset>\n\n  <button id="pony_up">Pony Up!</button>\n\n\t<span class="column span-4 last">\n\t\t<ul id="ponies"></ul>\n\t</span>\n');
+        __out.push('  <fieldset>\n    <legend>New Pony</legend>\n    <form id="new_pony" class="inline">\n      <label>Pony name:</label>\n      <input type="text" name="name" id="new_pony_name">\n      <label>Image url:</label>\n      <input type="text" name="img_url" id="new_pony_img_url">\n      <div class="wpb_wrapper">\n        <input type="submit" class="mpcth-sc-button mpcth-sc-button-size-normal" value="Add" id="add-pony">\n      </div>\n    </form>\n  </fieldset>\n\n  <button id="pony_up">Pony Up!</button>\n\n\t<span class="column span-4 last">\n\t\t<ul id="ponies"></ul>\n\t</span>\n');
       
       }).call(this);
       
@@ -14295,7 +14295,7 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
     }
     (function() {
       (function() {
-        __out.push('<div id="shopping-pony-outfit"></div>\n\n\n  <button id="save-outfit">Rock This Outfit!</button>\n');
+        __out.push('<div id="shopping-pony-outfit"></div>\n\n\n  <div class="big-button" id="save-outfit">Rock This Outfit!</div>\n');
       
       }).call(this);
       
@@ -14550,7 +14550,7 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
       previous_clothes = this.selected_array();
       for (_i = 0, _len = previous_clothes.length; _i < _len; _i++) {
         clothing_item = previous_clothes[_i];
-        if (clothing_item.get('dept') === "skirt") {
+        if (clothing_item.get('dept') === "skirts") {
           console.log("I found a skirt!");
           clothing_item.deselect();
           console.log(clothing_item);
@@ -15103,7 +15103,7 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
       var direction, new_scene;
       event.preventDefault();
       console.log("navigating");
-      direction = event.currentTarget.innerHTML;
+      direction = event.currentTarget.innerHTML.toLowerCase();
       new_scene = this.collection.navigate(this.collection.selected(), direction);
       if ($('#chat')[0].innerHTML === "") {
         return Mlp.vent.trigger('everfree:navigated', new_scene);
