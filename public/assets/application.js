@@ -13095,7 +13095,7 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
     }
     (function() {
       (function() {
-        __out.push('<hr>\n<button class="column span4" id="go-shopping">GO SHOPPING</button>\n\n<div class="column span16 choice-scene">\n  <p>\n    <div id="choice_pony">\n      <img src="');
+        __out.push('<hr>\n<div class="column span4 big-button" id="go-shopping">GO SHOPPING</div>\n\n<div class="column span16 choice-scene">\n  <p>\n    <div id="choice_pony">\n      <img src="');
       
         __out.push(__sanitize(this.choice_pony.get('img_url')));
       
@@ -13109,7 +13109,7 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
       
         __out.push(__sanitize(this.choice_pony.get('name')));
       
-        __out.push('\n  </p>\n</div>\n\n<button class="column span4" id="go-exploring">GO EXPLORING</button>\n</hr>\n');
+        __out.push('\n  </p>\n</div>\n\n<div class="column span4 big-button" id="go-exploring">GO EXPLORING</div>\n</hr>\n');
       
       }).call(this);
       
@@ -13317,7 +13317,7 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
     }
     (function() {
       (function() {
-        __out.push('<div id="nav-buttons">\n  <button class=\'navigate\' id="north">north</button>\n  <button class=\'navigate\' id="south">south</button>\n  <button class=\'navigate\' id="east">east</button>\n  <button class=\'navigate\' id="west">west</button>\n  <button id="escape">ESCAPE FROM EVERFREE</button>\n</div>\n<div id="everfree-scene"></div>\n<div id="chat"></div>\n');
+        __out.push('<div id="nav-buttons">\n  <div class=\'navigate big-button\' id="north">NORTH</div>\n  <div class=\'navigate big-button\' id="south">SOUTH</div>\n  <div class=\'navigate big-button\' id="east">EAST</div>\n  <div class=\'navigate big-button\' id="west">WEST</div>\n  <div class=\'big-button\' id="escape">ESCAPE FROM EVERFREE</div>\n</div>\n<div id="everfree-scene"></div>\n<div id="chat"></div> \n');
       
       }).call(this);
       
@@ -13925,7 +13925,11 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
     }
     (function() {
       (function() {
-        __out.push('<img src="');
+        __out.push('<img class="');
+      
+        __out.push(__sanitize(this.clothing.get('dept')));
+      
+        __out.push('-thumb" src="');
       
         __out.push(__sanitize(this.clothing.get('thumb_url')));
       
@@ -13934,6 +13938,56 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
         __out.push(__sanitize(this.clothing.get('id')));
       
         __out.push('" width="150">\n');
+      
+      }).call(this);
+      
+    }).call(__obj);
+    __obj.safe = __objSafe, __obj.escape = __escape;
+    return __out.join('');
+  };
+}).call(this);
+(function() {
+  this.JST || (this.JST = {});
+  this.JST["shopping/eyewear_index"] = function(__obj) {
+    if (!__obj) __obj = {};
+    var __out = [], __capture = function(callback) {
+      var out = __out, result;
+      __out = [];
+      callback.call(this);
+      result = __out.join('');
+      __out = out;
+      return __safe(result);
+    }, __sanitize = function(value) {
+      if (value && value.ecoSafe) {
+        return value;
+      } else if (typeof value !== 'undefined' && value != null) {
+        return __escape(value);
+      } else {
+        return '';
+      }
+    }, __safe, __objSafe = __obj.safe, __escape = __obj.escape;
+    __safe = __obj.safe = function(value) {
+      if (value && value.ecoSafe) {
+        return value;
+      } else {
+        if (!(typeof value !== 'undefined' && value != null)) value = '';
+        var result = new String(value);
+        result.ecoSafe = true;
+        return result;
+      }
+    };
+    if (!__escape) {
+      __escape = __obj.escape = function(value) {
+        return ('' + value)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;');
+      };
+    }
+    (function() {
+      (function() {
+        __out.push('<ul class="clothing" id="eyewear"></ul>\n');
       
       }).call(this);
       
@@ -14195,7 +14249,7 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
     }
     (function() {
       (function() {
-        __out.push('<hr>\n  <div class="column span-6 shelf" id="shoes-index">\n    <div class="clothing-sign" id="shoes-sign">SHOES</div>\n  </div>\n\n  <div class="column span-12 fitting-room-inner" id="shopping_pony"></div>\n\n  <div class="column span-6 shelf" id="hats-index">\n    <div class="clothing-sign" id="hats-sign">HATS</div>\n  </div>\n\n  <div class="skirts" id="skirts-index">\n    <div class="clothing-sign" id="skirts-sign">SKIRTS</div>\n  </div>\n</hr>\n');
+        __out.push('<hr>\n  <div class="column span-6 shelf" id="shoes-index">\n    <div class="clothing-sign" id="shoes-sign">SHOES</div>\n  </div>\n\n  <div class="column span-12 fitting-room-inner" id="shopping_pony"></div>\n\n  <div class="column span-6 shelf" id="hats-index">\n    <div class="clothing-sign" id="hats-sign">HATS</div>\n  </div>\n\n  <div class="skirts" id="skirts-index">\n    <div class="clothing-sign" id="skirts-sign">SKIRTS</div>\n  </div>\n\n  <div class="eyewear" id="eyewear-index">\n    <div class="clothing-sign" id="eyewear-sign">EYEWEAR</div>\n  </div>\n</hr>\n');
       
       }).call(this);
       
@@ -14295,7 +14349,7 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
     }
     (function() {
       (function() {
-        __out.push('<div id="shopping-pony-outfit"></div>\n\n\n  <button id="save-outfit">Rock This Outfit!</button>\n');
+        __out.push('<div id="shopping-pony-outfit"></div>\n\n\n  <div class="big-button" id="save-outfit">Rock This Outfit!</div>\n');
       
       }).call(this);
       
@@ -14451,6 +14505,7 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
       this.selected_array = __bind(this.selected_array, this);
       this.selected = __bind(this.selected, this);
       this.agnostic_filter = __bind(this.agnostic_filter, this);
+      this.eyewear = __bind(this.eyewear, this);
       this.skirts = __bind(this.skirts, this);
       this.hats = __bind(this.hats, this);
       this.shoes = __bind(this.shoes, this);
@@ -14478,6 +14533,12 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
     ClothingItems.prototype.skirts = function() {
       return this.where({
         dept: "skirts"
+      });
+    };
+
+    ClothingItems.prototype.eyewear = function() {
+      return this.where({
+        dept: "eyewear"
       });
     };
 
@@ -14550,7 +14611,7 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
       previous_clothes = this.selected_array();
       for (_i = 0, _len = previous_clothes.length; _i < _len; _i++) {
         clothing_item = previous_clothes[_i];
-        if (clothing_item.get('dept') === "skirt") {
+        if (clothing_item.get('dept') === "skirts") {
           console.log("I found a skirt!");
           clothing_item.deselect();
           console.log(clothing_item);
@@ -14562,6 +14623,26 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
       console.log("the new skirt are: " + (new_skirt.get('id')));
       new_skirt.select();
       return Mlp.vent.trigger('changeSkirts:finished');
+    };
+
+    ClothingItems.prototype.changeEyewear = function(eyewear_id) {
+      var clothing_item, new_eyewear, previous_clothes, _i, _len;
+      console.log("ok now i'm really changing eyewear...");
+      previous_clothes = this.selected_array();
+      for (_i = 0, _len = previous_clothes.length; _i < _len; _i++) {
+        clothing_item = previous_clothes[_i];
+        if (clothing_item.get('dept') === "eyewear") {
+          console.log("I found eyewear!");
+          clothing_item.deselect();
+          console.log(clothing_item);
+        }
+      }
+      new_eyewear = (this.models.filter(function(x) {
+        return x.get('id') === parseInt(eyewear_id);
+      }))[0];
+      console.log("the new eyewear are: " + (new_eyewear.get('id')));
+      new_eyewear.select();
+      return Mlp.vent.trigger('changeEyewear:finished');
     };
 
     return ClothingItems;
@@ -15103,7 +15184,7 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
       var direction, new_scene;
       event.preventDefault();
       console.log("navigating");
-      direction = event.currentTarget.innerHTML;
+      direction = event.currentTarget.innerHTML.toLowerCase();
       new_scene = this.collection.navigate(this.collection.selected(), direction);
       if ($('#chat')[0].innerHTML === "") {
         return Mlp.vent.trigger('everfree:navigated', new_scene);
@@ -15649,6 +15730,94 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
+  Mlp.Views.Eyewear = (function(_super) {
+    __extends(Eyewear, _super);
+
+    function Eyewear() {
+      this.render = __bind(this.render, this);
+      _ref = Eyewear.__super__.constructor.apply(this, arguments);
+      return _ref;
+    }
+
+    Eyewear.prototype.template = JST['shopping/eyewear_index'];
+
+    Eyewear.prototype.className = 'column span-4';
+
+    Eyewear.prototype.events = {
+      'click .clothing-list-item': 'changeEyewear'
+    };
+
+    Eyewear.prototype.initialize = function() {
+      this.eyewear = this.collection.eyewear();
+      this.on('change', this.render, this);
+      this.on('reset', this.render, this);
+      this.on('add', this.appendEyewear, this);
+      return this.on('render', this.positionEyewear, this);
+    };
+
+    Eyewear.prototype.render = function() {
+      var eyewear, _i, _len, _ref1;
+      console.log("rendering a eyewear...");
+      $(this.el).html(this.template());
+      _ref1 = this.eyewear;
+      for (_i = 0, _len = _ref1.length; _i < _len; _i++) {
+        eyewear = _ref1[_i];
+        this.appendEyewear(eyewear);
+      }
+      return this;
+    };
+
+    Eyewear.prototype.appendEyewear = function(eyewear) {
+      var eyewear_view;
+      eyewear_view = new Mlp.Views.ClothingListItem({
+        model: eyewear,
+        id: "eyewear-" + (eyewear.get('id'))
+      });
+      return this.$('#eyewear').append(eyewear_view.render().el);
+    };
+
+    Eyewear.prototype.positionEyewear = function() {
+      var eyewear, eyewear_id, i, top, _i, _len, _ref1;
+      _ref1 = this.eyewear;
+      for (i = _i = 0, _len = _ref1.length; _i < _len; i = ++_i) {
+        eyewear = _ref1[i];
+        eyewear_id = eyewear.get('id');
+        switch (i) {
+          case 0:
+            top = 0;
+            break;
+          case 1:
+            top = 50;
+            break;
+          default:
+            console.log("you added eyewear, time to get a bigger eyewear rack");
+        }
+        $("#eyewear-" + eyewear_id).css("top", "" + top + "px");
+        $("#eyewear-" + eyewear_id).css("left", "10px");
+      }
+      return this;
+    };
+
+    Eyewear.prototype.changeEyewear = function(event) {
+      var eyewear_id;
+      event.preventDefault();
+      console.log("Changing Eyewear yo...");
+      eyewear_id = event.currentTarget.id.split("-")[1];
+      console.log("you clicked: " + eyewear_id);
+      return this.collection.changeEyewear(eyewear_id);
+    };
+
+    return Eyewear;
+
+  })(Backbone.View);
+
+}).call(this);
+(function() {
+  var _ref,
+    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+    __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+
   Mlp.Views.FittingRoom = (function(_super) {
     __extends(FittingRoom, _super);
 
@@ -16015,7 +16184,8 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
     TryOn.prototype.initialize = function() {
       Mlp.vent.on('changeHat:finished', this.render, this);
       Mlp.vent.on('changeShoes:finished', this.render, this);
-      return Mlp.vent.on('changeSkirts:finished', this.render, this);
+      Mlp.vent.on('changeSkirts:finished', this.render, this);
+      return Mlp.vent.on('changeEyewear:finished', this.render, this);
     };
 
     TryOn.prototype.render = function() {
@@ -16185,7 +16355,7 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
       $('#shopping_pony').html(fitting_room_view.render().el);
       return this.clothing_items.fetch({
         success: function() {
-          var hats_view, shoes_view, skirts_view, try_on_view;
+          var eyewear_view, hats_view, shoes_view, skirts_view, try_on_view;
           hats_view = new Mlp.Views.Hats({
             collection: _this.clothing_items
           });
@@ -16201,6 +16371,11 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
           });
           $('#skirts-index').html(skirts_view.render().el);
           skirts_view.positionSkirts();
+          eyewear_view = new Mlp.Views.Eyewear({
+            collection: _this.clothing_items
+          });
+          $('#eyewear-index').html(eyewear_view.render().el);
+          eyewear_view.positionEyewear();
           try_on_view = new Mlp.Views.TryOn({
             collection: _this.clothing_items
           });

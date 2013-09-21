@@ -12,4 +12,8 @@
   <div class="skirts" id="skirts-index">
     <div class="clothing-sign" id="skirts-sign">SKIRTS</div>
   </div>
+
+  <div class="eyewear" id="eyewear-index">
+    <div class="clothing-sign" id="eyewear-sign">EYEWEAR</div>
+  </div>
 </hr>

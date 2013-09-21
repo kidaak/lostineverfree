@@ -8,6 +8,7 @@ class Mlp.Views.TryOn extends Backbone.View
     Mlp.vent.on('changeHat:finished', @render, this)
     Mlp.vent.on('changeShoes:finished', @render, this)
     Mlp.vent.on('changeSkirts:finished', @render, this)
+    Mlp.vent.on('changeEyewear:finished', @render, this)
 
   render: () =>
     $(@el).html(@template())

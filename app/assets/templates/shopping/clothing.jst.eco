@@ -1,1 +1,1 @@
-<img src="<%= @clothing.get('thumb_url') %>" alt="clothing<%= @clothing.get('id')%>" width="150">
+<img class="<%= @clothing.get('dept') %>-thumb" src="<%= @clothing.get('thumb_url') %>" alt="clothing<%= @clothing.get('id')%>" width="150">

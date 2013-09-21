@@ -89,7 +89,7 @@
 .clothing-list-item {
   position: absolute;
   z-index: 2;
-  width: 200px;
+  width: 100px;
   height: 60px;
   list-style-type: none;
   cursor: pointer;
@@ -198,4 +198,19 @@ cursor: pointer;
   border-style: solid;
   border-width: 5px;
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFFFF), to(#A2EBFA));
+}
+
+.eyewear {
+  z-index:2;
+  position: absolute;
+  left: 78%;
+  top: 80px;
+  background-image:url('eyewear_rack.png');
+  height: 108px;
+  width: 60px;
+  background-size: contain;
+}
+
+.eyewear-thumb {
+  width: 100px;
 }

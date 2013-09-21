@@ -12,6 +12,9 @@ class Mlp.Collections.ClothingItems extends Backbone.Collection
   skirts: =>
     this.where dept: "skirts"
 
+  eyewear: =>
+    this.where dept: "eyewear"
+
   agnostic_filter: (dept_name) =>
     this.where dept: dept_name
 
@@ -62,3 +65,16 @@ class Mlp.Collections.ClothingItems extends Backbone.Collection
     console.log("the new skirt are: #{new_skirt.get('id')}")
     new_skirt.select()
     Mlp.vent.trigger('changeSkirts:finished')
+
+  changeEyewear: (eyewear_id) ->
+    console.log("ok now i'm really changing eyewear...")
+    previous_clothes = this.selected_array()
+    for clothing_item in previous_clothes
+      if clothing_item.get('dept') == "eyewear"
+        console.log("I found eyewear!")
+        clothing_item.deselect()
+        console.log(clothing_item)
+    new_eyewear = (this.models.filter (x) -> x.get('id') == parseInt(eyewear_id))[0]
+    console.log("the new eyewear are: #{new_eyewear.get('id')}")
+    new_eyewear.select()
+    Mlp.vent.trigger('changeEyewear:finished')
