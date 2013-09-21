@@ -50,6 +50,9 @@ group :test, :development do
   gem 'foreman'
   gem 'fakefs', :require => 'fakefs/safe'
   gem 'jasminerice', :git => 'https://github.com/bradphelan/jasminerice.git'
+  gem 'guard'
+  gem 'guard-jasmine'
+  gem 'sinon-rails'
 end
 
 
